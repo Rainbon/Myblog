@@ -4,10 +4,10 @@
  */
 return array(
     'DB_TYPE' => 'mysql',
-    'DB_HOST' => 'localhost',
+    'DB_HOST' => 'yeskn.com',
     'DB_NAME' => 'myblog',
-    'DB_USER' => 'root',
-    'DB_PWD' => '',
+    'DB_USER' => 'admin',
+    'DB_PWD' => 'new-password',
     'DB_PORT' => '3306',
     'DB_PREFIX' => 'mb_',
     //密钥
