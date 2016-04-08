@@ -1,8 +1,8 @@
 <?php
 // +----------------------------------------------------------------------
-// | ThinkCMF [ WE CAN DO IT MORE SIMPLE ]
+// | 夜色空凝 - 彩虹 [ WE CAN DO IT MORE SIMPLE ]
 // +----------------------------------------------------------------------
-// | Copyright (c) 2013-2014 http://www.thinkcmf.com All rights reserved.
+// | Copyright (c) 2013-2014 http://ch.yeskn.com All rights reserved.
 // +----------------------------------------------------------------------
 // | Author: Tuolaji <479923197@qq.com>
 // +----------------------------------------------------------------------
@@ -368,7 +368,7 @@ class BackupController extends AdminbaseController
     private function _make_head($vol)
     {
         $date = date('Y-m-d H:i:s', time());
-        $head = "-- ThinkCMF SQL Dump Program\r\n" . "-- \r\n" . "-- DATE : " . $date . "\r\n" .
+        $head = "-- 夜色空凝 - 彩虹 SQL Dump Program\r\n" . "-- \r\n" . "-- DATE : " . $date . "\r\n" .
             "-- Vol : " . $vol . "\r\n";
         return $head;
     }

@@ -148,7 +148,7 @@ class  Template {
         $begin      =   $this->config['taglib_begin'];
         $end        =   $this->config['taglib_end'];
         // 检查tc_extend语法
-        $content    =   $this->parseTcExtend($content);//ThinkCMF NOTE
+        $content    =   $this->parseTcExtend($content);//夜色空凝 - 彩虹 NOTE
         // 检查include语法
         $content    =   $this->parseInclude($content);
         // 检查PHP语法
@@ -266,7 +266,7 @@ class  Template {
         return $content;
     }
     
-    // 解析模板中的tc_extend标签 ThinkCMF NOTE
+    // 解析模板中的tc_extend标签 夜色空凝 - 彩虹 NOTE
     protected function parseTcExtend($content) {
         $begin      =   $this->config['taglib_begin'];
         $end        =   $this->config['taglib_end'];
@@ -724,7 +724,7 @@ class  Template {
     }
     
     /**
-     * CMF 分析加载的模板文件并读取内容 支持多个模板文件读取 ThinkCMF NOTE
+     * CMF 分析加载的模板文件并读取内容 支持多个模板文件读取 夜色空凝 - 彩虹 NOTE
      * @access private
      * @param string $tmplPublicName  模板文件名
      * @return string

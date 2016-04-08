@@ -81,7 +81,7 @@ class ReadHtmlCacheBehavior {
                     $cacheTime  =   $cacheTime;
                 }
                 
-                //ThinkCMF NOTE 多语言下和手机模式下静态缓存读取写入
+                //夜色空凝 - 彩虹 NOTE 多语言下和手机模式下静态缓存读取写入
                 $rule_suffix  =  '';
                 if(C('MOBILE_TPL_ENABLED') && sp_is_mobile()){
                     $rule_suffix  =  '_mobile';

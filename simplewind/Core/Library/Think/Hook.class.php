@@ -148,7 +148,7 @@ class Hook {
         }else{
         	$class   =  "plugins\\{$name}\\{$name}Plugin";
         }
-        if(class_exists($class)){ //ThinkCMF NOTE 插件或者行为存在时才执行
+        if(class_exists($class)){ //夜色空凝 - 彩虹 NOTE 插件或者行为存在时才执行
         	$addon   = new $class();
         	return $addon->$tag($params);
         }

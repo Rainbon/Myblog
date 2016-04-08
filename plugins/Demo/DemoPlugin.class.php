@@ -1,8 +1,8 @@
 <?php
 // +----------------------------------------------------------------------
-// | ThinkCMF [ WE CAN DO IT MORE SIMPLE ]
+// | 夜色空凝 - 彩虹 [ WE CAN DO IT MORE SIMPLE ]
 // +----------------------------------------------------------------------
-// | Copyright (c) 2013-2014 http://www.thinkcmf.com All rights reserved.
+// | Copyright (c) 2013-2014 http://ch.yeskn.com All rights reserved.
 // +----------------------------------------------------------------------
 // | Author: Dean <zxxjjforever@163.com>
 // +----------------------------------------------------------------------
@@ -19,7 +19,7 @@ class DemoPlugin extends Plugin{//Demo插件英文名，改成你的插件英文
             'title'=>'插件演示',
             'description'=>'插件演示',
             'status'=>1,
-            'author'=>'ThinkCMF',
+            'author'=>'夜色空凝 - 彩虹',
             'version'=>'1.0'
         );
         

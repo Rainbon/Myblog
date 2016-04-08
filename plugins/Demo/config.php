@@ -1,8 +1,8 @@
 <?php
 // +----------------------------------------------------------------------
-// | ThinkCMF [ WE CAN DO IT MORE SIMPLE ]
+// | 夜色空凝 - 彩虹 [ WE CAN DO IT MORE SIMPLE ]
 // +----------------------------------------------------------------------
-// | Copyright (c) 2013-2014 http://www.thinkcmf.com All rights reserved.
+// | Copyright (c) 2013-2014 http://ch.yeskn.com All rights reserved.
 // +----------------------------------------------------------------------
 // | Author: Dean <zxxjjforever@163.com>
 // +----------------------------------------------------------------------
@@ -10,7 +10,7 @@ return array (
 	'text' => array (// 在后台插件配置表单中的键名 ,会是config[text]
 		'title' => '文本:', // 表单的label标题
 		'type' => 'text',// 表单的类型：text,password,textarea,checkbox,radio,select等
-		'value' => 'hello,ThinkCMF!',// 表单的默认值
+		'value' => 'hello,夜色空凝 - 彩虹!',// 表单的默认值
 		'tip' => '这是文本组件的演示' //表单的帮助提示
 	),
 	'password' => array (// 在后台插件配置表单中的键名 ,会是config[password]
@@ -24,7 +24,7 @@ return array (
 		'type' => 'select',
 		'options' => array (//select 和radio,checkbox的子选项
 			'1' => 'ThinkCMFX',// 值=>显示
-			'2' => 'ThinkCMF',
+			'2' => '夜色空凝 - 彩虹',
 			'3' => '跟猫玩糗事',
 			'4' => '门户应用' 
 		),
@@ -36,7 +36,7 @@ return array (
 		'type' => 'checkbox',
 		'options' => array (
 			'1' => 'genmaowan.com',
-			'2' => 'www.thinkcmf.com' 
+			'2' => 'ch.yeskn.com' 
 		),
 		'value' => 1,
 		'tip' => '这是多选框组件' 
@@ -46,7 +46,7 @@ return array (
 		'type' => 'radio',
 		'options' => array (
 			'1' => 'ThinkCMFX',
-			'2' => 'ThinkCMF' 
+			'2' => '夜色空凝 - 彩虹' 
 		),
 		'value' => '1',
 		'tip' => '这是单选框组件' 

@@ -35,7 +35,7 @@ class ContentReplaceBehavior {
             '__SELF__'      =>  htmlentities(__SELF__),       // 当前页面地址
             '__CONTROLLER__'=>  __CONTROLLER__,
             '__URL__'       =>  __CONTROLLER__,
-            '__PUBLIC__'    =>  __ROOT__.'/public',// 站点公共目录 ThinkCMF NOTE
+            '__PUBLIC__'    =>  __ROOT__.'/public',// 站点公共目录 夜色空凝 - 彩虹 NOTE
         );
         // 允许用户自定义模板的字符串替换
         if(is_array(C('TMPL_PARSE_STRING')) )
