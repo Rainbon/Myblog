@@ -15,6 +15,13 @@ class IndexController extends HomebaseController {
 	
     //首页
 	public function index() {
+		$posts = M('Posts')->order('post_date desc')->limit(10)->select();
+        if($posts){
+            foreach ($posts as $key => $value){
+                $posts[$key]['author_name'] = M('Users')->where(['id'=>$value['post_author']])->getField('user_nicename');
+            }
+        }
+        $this->assign('posts',$posts);
     	$this->display(":index");
     }
 

@@ -4,10 +4,10 @@
     <meta charset="utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
 
-    <title>邓彩虹的博客</title>
+    <title>{$post.post_title}</title>
     <meta name="description"
-          content="邓彩虹的博客"/>
-    <meta name="keywords" content="邓彩虹的博客">
+          content="{$post.post_title}"/>
+    <meta name="keywords" content="{$post.post_title}">
 
     <meta name="HandheldFriendly" content="True"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -91,25 +91,22 @@
 
             <main class="col-md-8 main-content">
 
-                <volist name="posts" id="vo">
-                    <article id={$vo.id} class="post">
+
+                    <article id={$post.id} class="post">
 
                         <div class="post-head">
-                            <h1 class="post-title"><a href='/portal/article/index/id/{$vo.id}'>{$vo.post_title}</a></h1>
+                            <h1 class="post-title"><a href="">{$post.post_title}</a></h1>
                             <div class="post-meta">
-                                <span class="author">作者：<a href="#">{$vo.author_name}</a></span> &bull;
+                                <span class="author">作者：<a href="#">{$post.author_name}</a></span> &bull;
                                 <time class="post-date" datetime="2016年3月23日星期三凌晨12点08分" title="2016年3月23日星期三凌晨12点08分">
                                     2016年3月23日
                                 </time>
                             </div>
                         </div>
                         <div class="post-content">
-                           {$vo.post_excerpt}
+                           {$post.post_content}
                         </div>
-                        <div class="post-permalink">
-                            <a href="/portal/article/index/id/{$vo.id}"
-                               class="btn btn-default">阅读全文</a>
-                        </div>
+
 
                         <footer class="post-footer clearfix">
                             <div class="pull-left tag-list">
@@ -120,13 +117,6 @@
                             </div>
                         </footer>
                     </article>
-                </volist>
-
-                <nav class="pagination" role="navigation">
-                    <span class="page-number">第 1 页 &frasl; 共 8 页</span>
-                    <a class="older-posts" href="/page/2/"><i class="fa fa-angle-right"></i></a>
-                </nav>
-
 
             </main>
 
