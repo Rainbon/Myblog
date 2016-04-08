@@ -36,7 +36,7 @@
 <body class="home-template">
 
 <!-- start header -->
-<header class="main-header" style="background-image: url('/public/blog/images/ad2.jpg')">
+<header class="main-header" style="background-image: url('/public/blog/images/nav2.jpg')">
     <div class="container">
         <div class="row">
             <div class="col-sm-12">
@@ -70,10 +70,10 @@
                 <div class="collapse navbar-collapse" id="main-menu">
                     <ul class="menu">
                         <li class="nav-current" role="presentation"><a href="/">首页</a></li>
-                        <li role="presentation"><a href="http://wenda.ghostchina.com"></a></li>
-                        <li role="presentation"><a href="/ghost-cheat-sheet/"></a></li>
-                        <li role="presentation"><a href="http://docs.ghostchina.com/zh/"></a></li>
-                        <li role="presentation"><a href="/download/"></a></li>
+                        <li role="presentation"><a href="">web技术</a></li>
+                        <li role="presentation"><a href="">生活</a></li>
+                        <li role="presentation"><a href="">作品展示</a></li>
+                        <li role="presentation"><a href="">参考资料</a></li>
                         <li role="presentation"><a href="/about/">关于</a></li>
                     </ul>
                 </div>
@@ -104,7 +104,7 @@
                             </div>
                         </div>
                         <div class="post-content">
-                           {$vo.post_excerpt}
+                            {$vo.post_excerpt}
                         </div>
                         <div class="post-permalink">
                             <a href="/portal/article/index/id/{$vo.id}"
@@ -136,25 +136,22 @@
 
                 <!-- start tag cloud widget -->
                 <div class="widget">
-                    <h4 class="title">我的</h4>
-                    <div class="content community">
-                        <p>QQ：2508078818</p>
-                        <p><a href="https://github.com/Rainbon" title="我的github" target="_blank"
-                              onclick="_hmt.push(['_trackEvent', 'big-button', 'click', '我的github'])"><i
-                                class="fa fa-comments"></i> Github</a></p>
-                        <p><a href="http://weibo.com/bootcss" title="bootstrap中文网" target="_blank"
-                              onclick="_hmt.push(['_trackEvent', 'big-button', 'click', '官方微博'])"><i
-                                class="fa fa-weibo"></i> bootstrap中文网</a></p>
-                        <p><a href="http://getbootstrap.com" title="bootstrap" target="_blank"
-                              onclick="_hmt.push(['_trackEvent', 'big-button', 'click', '官方微博'])"><i
-                                class="fa fa-weibo"></i> Bootstrap</a></p>
-                    </div>
+                    <h4 class="title">日历</h4>
                 </div>
                 <!-- end tag cloud widget -->
 
                 <!-- start tag cloud widget -->
                 <div class="widget">
-                    <h4 class="title">日历</h4>
+                    <h4 class="title">我的日常</h4>
+                    <div class="content community">
+                        <p>QQ：2508078818</p>
+                        <p><a href="https://github.com/Rainbon" title="我的github" target="_blank"
+                              onclick="_hmt.push(['_trackEvent', 'big-button', 'click', '我的github'])"><i
+                                class="fa fa-comments"></i> Github</a></p>
+                        <p><a href="http://getbootstrap.com" title="bootstrap" target="_blank"
+                              onclick="_hmt.push(['_trackEvent', 'big-button', 'click', '官方微博'])"><i
+                                class="fa fa-weibo"></i> Bootstrap</a></p>
+                    </div>
                 </div>
                 <!-- end tag cloud widget -->
 
@@ -182,81 +179,19 @@
         <div class="row">
             <div class="col-sm-4">
                 <div class="widget">
-                    <h4 class="title">最新文章</h4>
-                    <div class="content recent-post">
-                        <div class="recent-single-post">
-                            <a href="/install-nodejs-of-latest-version-in-ubuntu-and-debian/" class="post-title">为
-                                Ubuntu 和 Debian 安装最新版本的 Node.js</a>
-                            <div class="date">2016年3月23日</div>
-                        </div>
-                        <div class="recent-single-post">
-                            <a href="/ghost-0-7-4-released/" class="post-title">Ghost 0.7.4 正式发布</a>
-                            <div class="date">2015年12月29日</div>
-                        </div>
-                        <div class="recent-single-post">
-                            <a href="/ghost-0-7-0-released/" class="post-title">Ghost 0.7.0 正式发布</a>
-                            <div class="date">2015年9月7日</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-sm-4">
-                <div class="widget">
-                    <h4 class="title">标签云</h4>
-                    <div class="content tag-cloud">
-                        <a href="/tag/about-ghost/">Ghost</a>
-                        <a href="/tag/release/">新版本发布</a>
-                        <a href="/tag/javascript/">JavaScript</a>
-                        <a href="/tag/promise/">Promise</a>
-                        <a href="/tag/zhuti/">主题</a>
-                        <a href="/tag/nodejs/">Node.js</a>
-                        <a href="/tag/mysql/">MySQL</a>
-                        <a href="/tag/nginx/">Nginx</a>
-                        <a href="/tag/aliyun-ecs/">阿里云服务器</a>
-                        <a href="/tag/ubuntu/">Ubuntu</a>
-                        <a href="/tag/ghost-in-depth/">深度玩转 Ghost</a>
-                        <a href="/tag/theme/">Theme</a>
-                        <a href="/tag/markdown/">Markdown</a>
-                        <a href="/tag/proxy/">反向代理</a>
-                        <a href="/tag/apache/">Apache</a>
-
-                        <a href="/tag-cloud/">...</a>
-                    </div>
+                    <h4 class="title">友情链接</h4>
                 </div>
             </div>
 
             <div class="col-sm-4">
                 <div class="widget">
                     <h4 class="title">合作伙伴</h4>
-                    <div class="content tag-cloud friend-links">
-                        <a href="http://www.bootcss.com" title="Bootstrap中文网"
-                           onclick="_hmt.push(['_trackEvent', 'link', 'click', 'bootcsscom'])" target="_blank">Bootstrap中文网</a>
-                        <a href="http://www.bootcdn.cn" title="开放CDN服务"
-                           onclick="_hmt.push(['_trackEvent', 'link', 'click', 'bootcdncn'])"
-                           target="_blank">开放CDN服务</a>
-                        <a href="http://www.gruntjs.net" title="Grunt中文网"
-                           onclick="_hmt.push(['_trackEvent', 'link', 'click', 'gruntjsnet'])"
-                           target="_blank">Grunt中文网</a>
-                        <a href="http://www.gulpjs.com.cn/" title="Gulp中文网"
-                           onclick="_hmt.push(['_trackEvent', 'link', 'click', 'gulpjscomcn'])"
-                           target="_blank">Gulp中文网</a>
-                        <hr>
-                        <a href="http://lodashjs.com/" title="Lodash中文文档"
-                           onclick="_hmt.push(['_trackEvent', 'link', 'click', 'lodashjscom'])" target="_blank">Lodash中文文档</a>
-                        <a href="http://www.jquery123.com/" title="jQuery中文文档"
-                           onclick="_hmt.push(['_trackEvent', 'link', 'click', 'jquery123com'])" target="_blank">jQuery中文文档</a>
-                        <hr>
-                        <a href="http://www.aliyun.com/" title="阿里云"
-                           onclick="_hmt.push(['_trackEvent', 'link', 'click', 'aliyun'])" target="_blank">阿里云</a>
-                        <hr>
-                        <a href="https://www.upyun.com/" title="又拍云"
-                           onclick="_hmt.push(['_trackEvent', 'link', 'click', 'upyun'])" target="_blank">又拍云</a>
-                        <a href="http://www.ucloud.cn/" title="UCloud"
-                           onclick="_hmt.push(['_trackEvent', 'link', 'click', 'ucloud'])" target="_blank">UCloud</a>
-                        <a href="http://www.qiniu.com/" title="七牛云存储"
-                           onclick="_hmt.push(['_trackEvent', 'link', 'click', 'qiniu'])" target="_blank">七牛云存储</a>
-                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-4">
+                <div class="widget">
+                    <h4 class="title">推荐</h4>
                 </div>
             </div>
         </div>
@@ -267,9 +202,7 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-12">
-                <span>Copyright &copy; <a href="http://www.ghostchina.com/">Ghost中文网</a></span> |
-                <span><a href="http://www.miibeian.gov.cn/" target="_blank">京ICP备11008151号</a></span> |
-                <span>京公网安备11010802014853</span>
+                <span>Copyright &copy; | <a href="http://www.ghostchina.com/">@彩虹妹</a></span>
             </div>
         </div>
     </div>
@@ -292,7 +225,6 @@
         });
     });
 </script>
-
 
 
 <script>
