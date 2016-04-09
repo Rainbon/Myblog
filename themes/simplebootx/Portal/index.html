@@ -38,7 +38,7 @@
 <tc_include file="Public:nav" />
 
 <php>
-$home_slides=sp_getslide("portal_index");
+$home_slides=sp_getslide("home_index");
 
 $home_slides=empty($home_slides)?$default_home_slides:$home_slides;
 </php>
@@ -93,7 +93,7 @@ $home_slides=empty($home_slides)?$default_home_slides:$home_slides;
 		<h3 class="text-center">Last News</h3>
 	</div>
 	<php>
-		$lastnews=sp_sql_posts("cid:$portal_index_lastnews;field:post_title,post_excerpt,tid,smeta;order:listorder asc;limit:4;"); 
+		$lastnews=sp_sql_posts("cid:$home_index_lastnews;field:post_title,post_excerpt,tid,smeta;order:listorder asc;limit:4;");
 	</php>
 	<div class="row">
 		<foreach name="lastnews" item="vo">

@@ -163,14 +163,14 @@ right: initial !important;}
 						<i class="fa fa-home"></i>
 					</a>
 					
-					<if condition="sp_auth_check(sp_get_current_admin_id(),'portal/AdminTerm/index')">
-					<a class="btn btn-small btn-success" href="javascript:openapp('{:U('portal/AdminTerm/index')}','index_termlist','{:L('PORTAL_ADMINTERM_INDEX')}');" title="{:L('PORTAL_ADMINTERM_INDEX')}">
+					<if condition="sp_auth_check(sp_get_current_admin_id(),'home/AdminTerm/index')">
+					<a class="btn btn-small btn-success" href="javascript:openapp('{:U('home/AdminTerm/index')}','index_termlist','{:L('PORTAL_ADMINTERM_INDEX')}');" title="{:L('PORTAL_ADMINTERM_INDEX')}">
 						<i class="fa fa-th"></i>
 					</a>
 					</if>
 					
-					<if condition="sp_auth_check(sp_get_current_admin_id(),'portal/AdminPost/index')">
-					<a class="btn btn-small btn-info" href="javascript:openapp('{:U('portal/AdminPost/index')}','index_postlist','{:L('PORTAL_ADMINPOST_INDEX')}');" title="{:L('PORTAL_ADMINPOST_INDEX')}">
+					<if condition="sp_auth_check(sp_get_current_admin_id(),'home/AdminPost/index')">
+					<a class="btn btn-small btn-info" href="javascript:openapp('{:U('home/AdminPost/index')}','index_postlist','{:L('PORTAL_ADMINPOST_INDEX')}');" title="{:L('PORTAL_ADMINPOST_INDEX')}">
 						<i class="fa fa-pencil"></i>
 					</a>
 					</if>

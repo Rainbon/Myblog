@@ -25,10 +25,10 @@ $configs= array(
         'THIRD_UDER_ACCESS'		=> false, //第三方用户是否有全部权限，没有则需绑定本地账号
         /* 标签库 */
         'TAGLIB_BUILD_IN' => THINKCMF_CORE_TAGLIBS,
-        'MODULE_ALLOW_LIST'  => array('Admin','Portal','Asset','Api','User','Wx','Comment','Qiushi','Tpl','Topic','Install','Bug','Better','Pay','Cas'),
+        'MODULE_ALLOW_LIST'  => array('Admin','Home','Asset','Api','User','Wx','Comment','Qiushi','Tpl','Topic','Install','Bug','Better','Pay','Cas'),
         'TMPL_DETECT_THEME'     => false,       // 自动侦测模板主题
         'TMPL_TEMPLATE_SUFFIX'  => '.html',     // 默认模板文件后缀
-        'DEFAULT_MODULE'        =>  'Portal',  // 默认模块
+        'DEFAULT_MODULE'        =>  'Home',  // 默认模块
         'DEFAULT_CONTROLLER'    =>  'Index', // 默认控制器名称
         'DEFAULT_ACTION'        =>  'index', // 默认操作名称
         'DEFAULT_M_LAYER'       =>  'Model', // 默认的模型层名称
@@ -92,7 +92,9 @@ $configs= array(
         	'/Public/upload'=>'/data/upload',
         	'__UPLOAD__' => __ROOT__.'/data/upload/',
         	'__STATICS__' => __ROOT__.'/statics/',
-        )
+        ),
+
+		'HOME_PUBLIC_LAYOUT'  => APP_PATH.'Home/View/Public/layout.html',
 );
 
 return  array_merge($configs,$db,$runtime_config);

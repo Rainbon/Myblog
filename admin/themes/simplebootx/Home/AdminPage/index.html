@@ -33,7 +33,7 @@
 				<tr>
 					<td><input type="checkbox" class="js-check" data-yid="js-check-y" data-xid="js-check-x" name="ids[]" value="{$vo.id}"></td>
 					<td><a>{$vo.id}</a></td>
-					<td><a href="{:U('portal/page/index',array('id'=>$vo['id']))}" target="_blank"><span>{$vo.post_title}</span></a></td>
+					<td><a href="{:U('home/page/index',array('id'=>$vo['id']))}" target="_blank"><span>{$vo.post_title}</span></a></td>
 					<!--  <td>0</td> -->
 					<td>{$users[$vo['post_author']]['user_login']}</td>
 					<td>{$vo.post_date}</td>

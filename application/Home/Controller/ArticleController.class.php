@@ -9,7 +9,7 @@
 /**
  * 文章内页
  */
-namespace Portal\Controller;
+namespace Home\Controller;
 use Common\Controller\HomebaseController;
 class ArticleController extends HomebaseController {
     //文章内页

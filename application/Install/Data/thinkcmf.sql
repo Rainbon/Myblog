@@ -319,7 +319,7 @@ CREATE TABLE `cmf_posts` (
   KEY `post_parent` (`post_parent`),
   KEY `post_author` (`post_author`),
   KEY `post_date` (`post_date`) USING BTREE
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COMMENT='Portal文章表' AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COMMENT='Home文章表' AUTO_INCREMENT=1 ;
 
 
 -- 
@@ -370,7 +370,7 @@ CREATE TABLE `cmf_role_user` (
 
 CREATE TABLE `cmf_route` (
   `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '路由id',
-  `full_url` varchar(255) DEFAULT NULL COMMENT '完整url， 如：portal/list/index?id=1',
+  `full_url` varchar(255) DEFAULT NULL COMMENT '完整url， 如：home/list/index?id=1',
   `url` varchar(255) DEFAULT NULL COMMENT '实际显示的url',
   `listorder` int(5) DEFAULT '0' COMMENT '排序，优先级，越小优先级越高',
   `status` tinyint(1) DEFAULT '1' COMMENT '状态，1：启用 ;0：不启用',
@@ -446,7 +446,7 @@ CREATE TABLE `cmf_terms` (
   `listorder` int(5) NOT NULL DEFAULT '0' COMMENT '排序',
   `status` int(2) NOT NULL DEFAULT '1' COMMENT '状态，1发布，0不发布',
   PRIMARY KEY (`term_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COMMENT='Portal 文章分类表' AUTO_INCREMENT=3 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COMMENT='Home 文章分类表' AUTO_INCREMENT=3 ;
 
 -- 
 -- 导出表中的数据 `cmf_terms`
@@ -469,7 +469,7 @@ CREATE TABLE `cmf_term_relationships` (
   `status` int(2) NOT NULL DEFAULT '1' COMMENT '状态，1发布，0不发布',
   PRIMARY KEY (`tid`),
   KEY `term_taxonomy_id` (`term_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COMMENT='Portal 文章分类对应表' AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COMMENT='Home 文章分类对应表' AUTO_INCREMENT=1 ;
 
 
 -- --------------------------------------------------------
@@ -530,38 +530,38 @@ INSERT INTO `cmf_auth_rule` VALUES(3, 'Api', 'admin_url', 'api/guestbookadmin/de
 INSERT INTO `cmf_auth_rule` VALUES(4, 'Comment', 'admin_url', 'comment/commentadmin/index', NULL, '评论管理', 1, '');
 INSERT INTO `cmf_auth_rule` VALUES(5, 'Comment', 'admin_url', 'comment/commentadmin/delete', NULL, '删除评论', 1, '');
 INSERT INTO `cmf_auth_rule` VALUES(6, 'Comment', 'admin_url', 'comment/commentadmin/check', NULL, '评论审核', 1, '');
-INSERT INTO `cmf_auth_rule` VALUES(7, 'Portal', 'admin_url', 'portal/adminpost/index', NULL, '文章管理', 1, '');
-INSERT INTO `cmf_auth_rule` VALUES(8, 'Portal', 'admin_url', 'portal/adminpost/listorders', NULL, '文章排序', 1, '');
-INSERT INTO `cmf_auth_rule` VALUES(9, 'Portal', 'admin_url', 'portal/adminpost/top', NULL, '文章置顶', 1, '');
-INSERT INTO `cmf_auth_rule` VALUES(10, 'Portal', 'admin_url', 'portal/adminpost/recommend', NULL, '文章推荐', 1, '');
-INSERT INTO `cmf_auth_rule` VALUES(11, 'Portal', 'admin_url', 'portal/adminpost/move', NULL, '批量移动', 1, '');
-INSERT INTO `cmf_auth_rule` VALUES(12, 'Portal', 'admin_url', 'portal/adminpost/check', NULL, '文章审核', 1, '');
-INSERT INTO `cmf_auth_rule` VALUES(13, 'Portal', 'admin_url', 'portal/adminpost/delete', NULL, '删除文章', 1, '');
-INSERT INTO `cmf_auth_rule` VALUES(14, 'Portal', 'admin_url', 'portal/adminpost/edit', NULL, '编辑文章', 1, '');
-INSERT INTO `cmf_auth_rule` VALUES(15, 'Portal', 'admin_url', 'portal/adminpost/edit_post', NULL, '提交编辑', 1, '');
-INSERT INTO `cmf_auth_rule` VALUES(16, 'Portal', 'admin_url', 'portal/adminpost/add', NULL, '添加文章', 1, '');
-INSERT INTO `cmf_auth_rule` VALUES(17, 'Portal', 'admin_url', 'portal/adminpost/add_post', NULL, '提交添加', 1, '');
-INSERT INTO `cmf_auth_rule` VALUES(18, 'Portal', 'admin_url', 'portal/adminterm/index', NULL, '分类管理', 1, '');
-INSERT INTO `cmf_auth_rule` VALUES(19, 'Portal', 'admin_url', 'portal/adminterm/listorders', NULL, '文章分类排序', 1, '');
-INSERT INTO `cmf_auth_rule` VALUES(20, 'Portal', 'admin_url', 'portal/adminterm/delete', NULL, '删除分类', 1, '');
-INSERT INTO `cmf_auth_rule` VALUES(21, 'Portal', 'admin_url', 'portal/adminterm/edit', NULL, '编辑分类', 1, '');
-INSERT INTO `cmf_auth_rule` VALUES(22, 'Portal', 'admin_url', 'portal/adminterm/edit_post', NULL, '提交编辑', 1, '');
-INSERT INTO `cmf_auth_rule` VALUES(23, 'Portal', 'admin_url', 'portal/adminterm/add', NULL, '添加分类', 1, '');
-INSERT INTO `cmf_auth_rule` VALUES(24, 'Portal', 'admin_url', 'portal/adminterm/add_post', NULL, '提交添加', 1, '');
-INSERT INTO `cmf_auth_rule` VALUES(25, 'Portal', 'admin_url', 'portal/adminpage/index', NULL, '页面管理', 1, '');
-INSERT INTO `cmf_auth_rule` VALUES(26, 'Portal', 'admin_url', 'portal/adminpage/listorders', NULL, '页面排序', 1, '');
-INSERT INTO `cmf_auth_rule` VALUES(27, 'Portal', 'admin_url', 'portal/adminpage/delete', NULL, '删除页面', 1, '');
-INSERT INTO `cmf_auth_rule` VALUES(28, 'Portal', 'admin_url', 'portal/adminpage/edit', NULL, '编辑页面', 1, '');
-INSERT INTO `cmf_auth_rule` VALUES(29, 'Portal', 'admin_url', 'portal/adminpage/edit_post', NULL, '提交编辑', 1, '');
-INSERT INTO `cmf_auth_rule` VALUES(30, 'Portal', 'admin_url', 'portal/adminpage/add', NULL, '添加页面', 1, '');
-INSERT INTO `cmf_auth_rule` VALUES(31, 'Portal', 'admin_url', 'portal/adminpage/add_post', NULL, '提交添加', 1, '');
+INSERT INTO `cmf_auth_rule` VALUES(7, 'Home', 'admin_url', 'home/adminpost/index', NULL, '文章管理', 1, '');
+INSERT INTO `cmf_auth_rule` VALUES(8, 'Home', 'admin_url', 'home/adminpost/listorders', NULL, '文章排序', 1, '');
+INSERT INTO `cmf_auth_rule` VALUES(9, 'Home', 'admin_url', 'home/adminpost/top', NULL, '文章置顶', 1, '');
+INSERT INTO `cmf_auth_rule` VALUES(10, 'Home', 'admin_url', 'home/adminpost/recommend', NULL, '文章推荐', 1, '');
+INSERT INTO `cmf_auth_rule` VALUES(11, 'Home', 'admin_url', 'home/adminpost/move', NULL, '批量移动', 1, '');
+INSERT INTO `cmf_auth_rule` VALUES(12, 'Home', 'admin_url', 'home/adminpost/check', NULL, '文章审核', 1, '');
+INSERT INTO `cmf_auth_rule` VALUES(13, 'Home', 'admin_url', 'home/adminpost/delete', NULL, '删除文章', 1, '');
+INSERT INTO `cmf_auth_rule` VALUES(14, 'Home', 'admin_url', 'home/adminpost/edit', NULL, '编辑文章', 1, '');
+INSERT INTO `cmf_auth_rule` VALUES(15, 'Home', 'admin_url', 'home/adminpost/edit_post', NULL, '提交编辑', 1, '');
+INSERT INTO `cmf_auth_rule` VALUES(16, 'Home', 'admin_url', 'home/adminpost/add', NULL, '添加文章', 1, '');
+INSERT INTO `cmf_auth_rule` VALUES(17, 'Home', 'admin_url', 'home/adminpost/add_post', NULL, '提交添加', 1, '');
+INSERT INTO `cmf_auth_rule` VALUES(18, 'Home', 'admin_url', 'home/adminterm/index', NULL, '分类管理', 1, '');
+INSERT INTO `cmf_auth_rule` VALUES(19, 'Home', 'admin_url', 'home/adminterm/listorders', NULL, '文章分类排序', 1, '');
+INSERT INTO `cmf_auth_rule` VALUES(20, 'Home', 'admin_url', 'home/adminterm/delete', NULL, '删除分类', 1, '');
+INSERT INTO `cmf_auth_rule` VALUES(21, 'Home', 'admin_url', 'home/adminterm/edit', NULL, '编辑分类', 1, '');
+INSERT INTO `cmf_auth_rule` VALUES(22, 'Home', 'admin_url', 'home/adminterm/edit_post', NULL, '提交编辑', 1, '');
+INSERT INTO `cmf_auth_rule` VALUES(23, 'Home', 'admin_url', 'home/adminterm/add', NULL, '添加分类', 1, '');
+INSERT INTO `cmf_auth_rule` VALUES(24, 'Home', 'admin_url', 'home/adminterm/add_post', NULL, '提交添加', 1, '');
+INSERT INTO `cmf_auth_rule` VALUES(25, 'Home', 'admin_url', 'home/adminpage/index', NULL, '页面管理', 1, '');
+INSERT INTO `cmf_auth_rule` VALUES(26, 'Home', 'admin_url', 'home/adminpage/listorders', NULL, '页面排序', 1, '');
+INSERT INTO `cmf_auth_rule` VALUES(27, 'Home', 'admin_url', 'home/adminpage/delete', NULL, '删除页面', 1, '');
+INSERT INTO `cmf_auth_rule` VALUES(28, 'Home', 'admin_url', 'home/adminpage/edit', NULL, '编辑页面', 1, '');
+INSERT INTO `cmf_auth_rule` VALUES(29, 'Home', 'admin_url', 'home/adminpage/edit_post', NULL, '提交编辑', 1, '');
+INSERT INTO `cmf_auth_rule` VALUES(30, 'Home', 'admin_url', 'home/adminpage/add', NULL, '添加页面', 1, '');
+INSERT INTO `cmf_auth_rule` VALUES(31, 'Home', 'admin_url', 'home/adminpage/add_post', NULL, '提交添加', 1, '');
 INSERT INTO `cmf_auth_rule` VALUES(32, 'Admin', 'admin_url', 'admin/recycle/default', NULL, '回收站', 1, '');
-INSERT INTO `cmf_auth_rule` VALUES(33, 'Portal', 'admin_url', 'portal/adminpost/recyclebin', NULL, '文章回收', 1, '');
-INSERT INTO `cmf_auth_rule` VALUES(34, 'Portal', 'admin_url', 'portal/adminpost/restore', NULL, '文章还原', 1, '');
-INSERT INTO `cmf_auth_rule` VALUES(35, 'Portal', 'admin_url', 'portal/adminpost/clean', NULL, '彻底删除', 1, '');
-INSERT INTO `cmf_auth_rule` VALUES(36, 'Portal', 'admin_url', 'portal/adminpage/recyclebin', NULL, '页面回收', 1, '');
-INSERT INTO `cmf_auth_rule` VALUES(37, 'Portal', 'admin_url', 'portal/adminpage/clean', NULL, '彻底删除', 1, '');
-INSERT INTO `cmf_auth_rule` VALUES(38, 'Portal', 'admin_url', 'portal/adminpage/restore', NULL, '页面还原', 1, '');
+INSERT INTO `cmf_auth_rule` VALUES(33, 'Home', 'admin_url', 'home/adminpost/recyclebin', NULL, '文章回收', 1, '');
+INSERT INTO `cmf_auth_rule` VALUES(34, 'Home', 'admin_url', 'home/adminpost/restore', NULL, '文章还原', 1, '');
+INSERT INTO `cmf_auth_rule` VALUES(35, 'Home', 'admin_url', 'home/adminpost/clean', NULL, '彻底删除', 1, '');
+INSERT INTO `cmf_auth_rule` VALUES(36, 'Home', 'admin_url', 'home/adminpage/recyclebin', NULL, '页面回收', 1, '');
+INSERT INTO `cmf_auth_rule` VALUES(37, 'Home', 'admin_url', 'home/adminpage/clean', NULL, '彻底删除', 1, '');
+INSERT INTO `cmf_auth_rule` VALUES(38, 'Home', 'admin_url', 'home/adminpage/restore', NULL, '页面还原', 1, '');
 INSERT INTO `cmf_auth_rule` VALUES(39, 'Admin', 'admin_url', 'admin/extension/default', NULL, '扩展工具', 1, '');
 INSERT INTO `cmf_auth_rule` VALUES(40, 'Admin', 'admin_url', 'admin/backup/default', NULL, '备份管理', 1, '');
 INSERT INTO `cmf_auth_rule` VALUES(41, 'Admin', 'admin_url', 'admin/backup/restore', NULL, '数据还原', 1, '');
@@ -703,38 +703,38 @@ INSERT INTO `cmf_menu` VALUES(3, 2, 'Api', 'Guestbookadmin', 'delete', '', 1, 0,
 INSERT INTO `cmf_menu` VALUES(4, 1, 'Comment', 'Commentadmin', 'index', '', 1, 1, '评论管理', '', '', 0);
 INSERT INTO `cmf_menu` VALUES(5, 4, 'Comment', 'Commentadmin', 'delete', '', 1, 0, '删除评论', '', '', 0);
 INSERT INTO `cmf_menu` VALUES(6, 4, 'Comment', 'Commentadmin', 'check', '', 1, 0, '评论审核', '', '', 0);
-INSERT INTO `cmf_menu` VALUES(7, 1, 'Portal', 'AdminPost', 'index', '', 1, 1, '文章管理', '', '', 1);
-INSERT INTO `cmf_menu` VALUES(8, 7, 'Portal', 'AdminPost', 'listorders', '', 1, 0, '文章排序', '', '', 0);
-INSERT INTO `cmf_menu` VALUES(9, 7, 'Portal', 'AdminPost', 'top', '', 1, 0, '文章置顶', '', '', 0);
-INSERT INTO `cmf_menu` VALUES(10, 7, 'Portal', 'AdminPost', 'recommend', '', 1, 0, '文章推荐', '', '', 0);
-INSERT INTO `cmf_menu` VALUES(11, 7, 'Portal', 'AdminPost', 'move', '', 1, 0, '批量移动', '', '', 1000);
-INSERT INTO `cmf_menu` VALUES(12, 7, 'Portal', 'AdminPost', 'check', '', 1, 0, '文章审核', '', '', 1000);
-INSERT INTO `cmf_menu` VALUES(13, 7, 'Portal', 'AdminPost', 'delete', '', 1, 0, '删除文章', '', '', 1000);
-INSERT INTO `cmf_menu` VALUES(14, 7, 'Portal', 'AdminPost', 'edit', '', 1, 0, '编辑文章', '', '', 1000);
-INSERT INTO `cmf_menu` VALUES(15, 14, 'Portal', 'AdminPost', 'edit_post', '', 1, 0, '提交编辑', '', '', 0);
-INSERT INTO `cmf_menu` VALUES(16, 7, 'Portal', 'AdminPost', 'add', '', 1, 0, '添加文章', '', '', 1000);
-INSERT INTO `cmf_menu` VALUES(17, 16, 'Portal', 'AdminPost', 'add_post', '', 1, 0, '提交添加', '', '', 0);
-INSERT INTO `cmf_menu` VALUES(18, 1, 'Portal', 'AdminTerm', 'index', '', 0, 1, '分类管理', '', '', 2);
-INSERT INTO `cmf_menu` VALUES(19, 18, 'Portal', 'AdminTerm', 'listorders', '', 1, 0, '文章分类排序', '', '', 0);
-INSERT INTO `cmf_menu` VALUES(20, 18, 'Portal', 'AdminTerm', 'delete', '', 1, 0, '删除分类', '', '', 1000);
-INSERT INTO `cmf_menu` VALUES(21, 18, 'Portal', 'AdminTerm', 'edit', '', 1, 0, '编辑分类', '', '', 1000);
-INSERT INTO `cmf_menu` VALUES(22, 21, 'Portal', 'AdminTerm', 'edit_post', '', 1, 0, '提交编辑', '', '', 0);
-INSERT INTO `cmf_menu` VALUES(23, 18, 'Portal', 'AdminTerm', 'add', '', 1, 0, '添加分类', '', '', 1000);
-INSERT INTO `cmf_menu` VALUES(24, 23, 'Portal', 'AdminTerm', 'add_post', '', 1, 0, '提交添加', '', '', 0);
-INSERT INTO `cmf_menu` VALUES(25, 1, 'Portal', 'AdminPage', 'index', '', 1, 1, '页面管理', '', '', 3);
-INSERT INTO `cmf_menu` VALUES(26, 25, 'Portal', 'AdminPage', 'listorders', '', 1, 0, '页面排序', '', '', 0);
-INSERT INTO `cmf_menu` VALUES(27, 25, 'Portal', 'AdminPage', 'delete', '', 1, 0, '删除页面', '', '', 1000);
-INSERT INTO `cmf_menu` VALUES(28, 25, 'Portal', 'AdminPage', 'edit', '', 1, 0, '编辑页面', '', '', 1000);
-INSERT INTO `cmf_menu` VALUES(29, 28, 'Portal', 'AdminPage', 'edit_post', '', 1, 0, '提交编辑', '', '', 0);
-INSERT INTO `cmf_menu` VALUES(30, 25, 'Portal', 'AdminPage', 'add', '', 1, 0, '添加页面', '', '', 1000);
-INSERT INTO `cmf_menu` VALUES(31, 30, 'Portal', 'AdminPage', 'add_post', '', 1, 0, '提交添加', '', '', 0);
+INSERT INTO `cmf_menu` VALUES(7, 1, 'Home', 'AdminPost', 'index', '', 1, 1, '文章管理', '', '', 1);
+INSERT INTO `cmf_menu` VALUES(8, 7, 'Home', 'AdminPost', 'listorders', '', 1, 0, '文章排序', '', '', 0);
+INSERT INTO `cmf_menu` VALUES(9, 7, 'Home', 'AdminPost', 'top', '', 1, 0, '文章置顶', '', '', 0);
+INSERT INTO `cmf_menu` VALUES(10, 7, 'Home', 'AdminPost', 'recommend', '', 1, 0, '文章推荐', '', '', 0);
+INSERT INTO `cmf_menu` VALUES(11, 7, 'Home', 'AdminPost', 'move', '', 1, 0, '批量移动', '', '', 1000);
+INSERT INTO `cmf_menu` VALUES(12, 7, 'Home', 'AdminPost', 'check', '', 1, 0, '文章审核', '', '', 1000);
+INSERT INTO `cmf_menu` VALUES(13, 7, 'Home', 'AdminPost', 'delete', '', 1, 0, '删除文章', '', '', 1000);
+INSERT INTO `cmf_menu` VALUES(14, 7, 'Home', 'AdminPost', 'edit', '', 1, 0, '编辑文章', '', '', 1000);
+INSERT INTO `cmf_menu` VALUES(15, 14, 'Home', 'AdminPost', 'edit_post', '', 1, 0, '提交编辑', '', '', 0);
+INSERT INTO `cmf_menu` VALUES(16, 7, 'Home', 'AdminPost', 'add', '', 1, 0, '添加文章', '', '', 1000);
+INSERT INTO `cmf_menu` VALUES(17, 16, 'Home', 'AdminPost', 'add_post', '', 1, 0, '提交添加', '', '', 0);
+INSERT INTO `cmf_menu` VALUES(18, 1, 'Home', 'AdminTerm', 'index', '', 0, 1, '分类管理', '', '', 2);
+INSERT INTO `cmf_menu` VALUES(19, 18, 'Home', 'AdminTerm', 'listorders', '', 1, 0, '文章分类排序', '', '', 0);
+INSERT INTO `cmf_menu` VALUES(20, 18, 'Home', 'AdminTerm', 'delete', '', 1, 0, '删除分类', '', '', 1000);
+INSERT INTO `cmf_menu` VALUES(21, 18, 'Home', 'AdminTerm', 'edit', '', 1, 0, '编辑分类', '', '', 1000);
+INSERT INTO `cmf_menu` VALUES(22, 21, 'Home', 'AdminTerm', 'edit_post', '', 1, 0, '提交编辑', '', '', 0);
+INSERT INTO `cmf_menu` VALUES(23, 18, 'Home', 'AdminTerm', 'add', '', 1, 0, '添加分类', '', '', 1000);
+INSERT INTO `cmf_menu` VALUES(24, 23, 'Home', 'AdminTerm', 'add_post', '', 1, 0, '提交添加', '', '', 0);
+INSERT INTO `cmf_menu` VALUES(25, 1, 'Home', 'AdminPage', 'index', '', 1, 1, '页面管理', '', '', 3);
+INSERT INTO `cmf_menu` VALUES(26, 25, 'Home', 'AdminPage', 'listorders', '', 1, 0, '页面排序', '', '', 0);
+INSERT INTO `cmf_menu` VALUES(27, 25, 'Home', 'AdminPage', 'delete', '', 1, 0, '删除页面', '', '', 1000);
+INSERT INTO `cmf_menu` VALUES(28, 25, 'Home', 'AdminPage', 'edit', '', 1, 0, '编辑页面', '', '', 1000);
+INSERT INTO `cmf_menu` VALUES(29, 28, 'Home', 'AdminPage', 'edit_post', '', 1, 0, '提交编辑', '', '', 0);
+INSERT INTO `cmf_menu` VALUES(30, 25, 'Home', 'AdminPage', 'add', '', 1, 0, '添加页面', '', '', 1000);
+INSERT INTO `cmf_menu` VALUES(31, 30, 'Home', 'AdminPage', 'add_post', '', 1, 0, '提交添加', '', '', 0);
 INSERT INTO `cmf_menu` VALUES(32, 1, 'Admin', 'Recycle', 'default', '', 1, 1, '回收站', '', '', 4);
-INSERT INTO `cmf_menu` VALUES(33, 32, 'Portal', 'AdminPost', 'recyclebin', '', 1, 1, '文章回收', '', '', 0);
-INSERT INTO `cmf_menu` VALUES(34, 33, 'Portal', 'AdminPost', 'restore', '', 1, 0, '文章还原', '', '', 1000);
-INSERT INTO `cmf_menu` VALUES(35, 33, 'Portal', 'AdminPost', 'clean', '', 1, 0, '彻底删除', '', '', 1000);
-INSERT INTO `cmf_menu` VALUES(36, 32, 'Portal', 'AdminPage', 'recyclebin', '', 1, 1, '页面回收', '', '', 1);
-INSERT INTO `cmf_menu` VALUES(37, 36, 'Portal', 'AdminPage', 'clean', '', 1, 0, '彻底删除', '', '', 1000);
-INSERT INTO `cmf_menu` VALUES(38, 36, 'Portal', 'AdminPage', 'restore', '', 1, 0, '页面还原', '', '', 1000);
+INSERT INTO `cmf_menu` VALUES(33, 32, 'Home', 'AdminPost', 'recyclebin', '', 1, 1, '文章回收', '', '', 0);
+INSERT INTO `cmf_menu` VALUES(34, 33, 'Home', 'AdminPost', 'restore', '', 1, 0, '文章还原', '', '', 1000);
+INSERT INTO `cmf_menu` VALUES(35, 33, 'Home', 'AdminPost', 'clean', '', 1, 0, '彻底删除', '', '', 1000);
+INSERT INTO `cmf_menu` VALUES(36, 32, 'Home', 'AdminPage', 'recyclebin', '', 1, 1, '页面回收', '', '', 1);
+INSERT INTO `cmf_menu` VALUES(37, 36, 'Home', 'AdminPage', 'clean', '', 1, 0, '彻底删除', '', '', 1000);
+INSERT INTO `cmf_menu` VALUES(38, 36, 'Home', 'AdminPage', 'restore', '', 1, 0, '页面还原', '', '', 1000);
 INSERT INTO `cmf_menu` VALUES(39, 0, 'Admin', 'Extension', 'default', '', 0, 1, '扩展工具', 'cloud', '', 40);
 INSERT INTO `cmf_menu` VALUES(40, 39, 'Admin', 'Backup', 'default', '', 1, 1, '备份管理', '', '', 0);
 INSERT INTO `cmf_menu` VALUES(41, 40, 'Admin', 'Backup', 'restore', '', 1, 1, '数据还原', '', '', 0);
@@ -865,8 +865,8 @@ INSERT INTO `cmf_menu` VALUES(161, 149, 'Admin', 'User', 'cancelban', '', 1, 0, 
 -- 
 
 INSERT INTO `cmf_nav` VALUES (1, 1, 0, '首页', '', 'home', '', 1, 0, '0-1');
-INSERT INTO `cmf_nav` VALUES (2, 1, 0, '列表演示', '', 'a:2:{s:6:"action";s:17:"Portal/List/index";s:5:"param";a:1:{s:2:"id";s:1:"1";}}', '', 1, 0, '0-2');
-INSERT INTO `cmf_nav` VALUES (3, 1, 0, '瀑布流', '', 'a:2:{s:6:"action";s:17:"Portal/List/index";s:5:"param";a:1:{s:2:"id";s:1:"2";}}', '', 1, 0, '0-3');
+INSERT INTO `cmf_nav` VALUES (2, 1, 0, '列表演示', '', 'a:2:{s:6:"action";s:17:"Home/List/index";s:5:"param";a:1:{s:2:"id";s:1:"1";}}', '', 1, 0, '0-2');
+INSERT INTO `cmf_nav` VALUES (3, 1, 0, '瀑布流', '', 'a:2:{s:6:"action";s:17:"Home/List/index";s:5:"param";a:1:{s:2:"id";s:1:"2";}}', '', 1, 0, '0-3');
 
 
 -- 

@@ -68,7 +68,7 @@
 		    	))}
 		    </div>
 		    
-		    <php>$ad=sp_getad("portal_article_bottom");</php>
+		    <php>$ad=sp_getad("home_article_bottom");</php>
 			<if condition="!empty($ad)">
         	<div class="tc-box">
 	        	<div class="headtitle">
@@ -96,7 +96,7 @@
 	        	</div>
 	        	<div class="ranking">
 	        		<php>
-						$hot_articles=sp_sql_posts("cid:$portal_hot_articles;field:post_title,post_excerpt,tid,smeta,term_id;order:post_hits desc;limit:5;"); 
+						$hot_articles=sp_sql_posts("cid:$home_hot_articles;field:post_title,post_excerpt,tid,smeta,term_id;order:post_hits desc;limit:5;");
 					</php>
 		        	<ul class="unstyled">
 		        		<foreach name="hot_articles" item="vo">

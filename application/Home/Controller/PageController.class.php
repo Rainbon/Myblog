@@ -6,45 +6,41 @@
 // +----------------------------------------------------------------------
 // | Author: Dean <zxxjjforever@163.com>
 // +----------------------------------------------------------------------
-namespace Portal\Controller;
+namespace Home\Controller;
 use Common\Controller\HomebaseController;
-/**
- * 文章列表
-*/
-class ListController extends HomebaseController {
-
-	//文章内页
+class PageController extends HomebaseController{
 	public function index() {
-		$term=sp_get_term($_GET['id']);
+		$id=$_GET['id'];
+		$content=sp_sql_page($id);
 		
-		if(empty($term)){
+		if(empty($content)){
 		    header('HTTP/1.1 404 Not Found');
 		    header('Status:404 Not Found');
 		    if(sp_template_file_exists(MODULE_NAME."/404")){
 		        $this->display(":404");
 		    }
-		    	
+		     
 		    return ;
 		}
 		
-		$tplname=$term["list_tpl"];
-    	$tplname=sp_get_apphome_tpl($tplname, "list");
-    	$this->assign($term);
-    	$this->assign('cat_id', intval($_GET['id']));
-    	$this->display(":$tplname");
+		$this->assign($content);
+		$smeta=json_decode($content['smeta'],true);
+		$tplname=isset($smeta['template'])?$smeta['template']:"";
+		
+		$tplname=sp_get_apphome_tpl($tplname, "page");
+		
+		$this->display(":$tplname");
 	}
 	
 	public function nav_index(){
-		$navcatname="文章分类";
-		$datas=sp_get_terms("field:term_id,name");
+		$navcatname="页面";
+		$datas=sp_sql_pages("field:id,post_title;");
 		$navrule=array(
-				"action"=>"List/index",
+				"action"=>"Page/index",
 				"param"=>array(
-						"id"=>"term_id"
+						"id"=>"id"
 				),
-				"label"=>"name");
-		exit(sp_get_nav4admin($navcatname,$datas,$navrule));
-		
+				"label"=>"post_title");
+		exit( sp_get_nav4admin($navcatname,$datas,$navrule) );
 	}
-	
 }

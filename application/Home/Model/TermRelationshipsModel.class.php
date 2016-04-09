@@ -1,5 +1,5 @@
 <?php
-namespace Portal\Model;
+namespace Home\Model;
 use Common\Model\CommonModel;
 class TermRelationshipsModel extends CommonModel {
 	

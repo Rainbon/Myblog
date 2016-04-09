@@ -6,7 +6,7 @@
 // +----------------------------------------------------------------------
 // | Author: Dean <zxxjjforever@163.com>
 // +----------------------------------------------------------------------
-namespace Portal\Controller;
+namespace Home\Controller;
 use Common\Controller\HomebaseController; 
 /**
  * 首页

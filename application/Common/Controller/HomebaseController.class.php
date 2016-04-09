@@ -34,6 +34,7 @@ class HomebaseController extends AppframeController {
 		if(sp_is_user_login()){
 			$this->assign("user",sp_get_current_user());
 		}
+		$this->assign('_home_public_layout', C('HOME_PUBLIC_LAYOUT'));  // 页面公共继承模版
 		
 	}
 	

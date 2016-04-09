@@ -32,7 +32,7 @@
 								<div class="list-actions">
 								<a href="javascript:;"><i class="fa fa-eye"></i><span>{$vo.post_hits}</span></a>
 								<a href="{:U('article/do_like',array('id'=>$vo['object_id']))}" class="js-count-btn"><i class="fa fa-thumbs-up"></i><span class="count">{$vo.post_like}</span></a>
-								<a href="{:U('user/favorite/do_favorite',array('id'=>$vo['object_id']))}" class="js-favorite-btn" data-title="{$vo.post_title}" data-url="{:U('portal/article/index',array('id'=>$vo['tid']))}" data-key="{:sp_get_favorite_key('posts',$vo['object_id'])}">
+								<a href="{:U('user/favorite/do_favorite',array('id'=>$vo['object_id']))}" class="js-favorite-btn" data-title="{$vo.post_title}" data-url="{:U('home/article/index',array('id'=>$vo['tid']))}" data-key="{:sp_get_favorite_key('posts',$vo['object_id'])}">
 									<i class="fa fa-star-o"></i>
 								</a>
 								</div>
@@ -64,7 +64,7 @@
 	        	</div>
 	        	<div class="ranking">
 	        		<php>
-						$hot_articles=sp_sql_posts("cid:$portal_index_lastnews;field:post_title,post_excerpt,tid,smeta;order:post_hits desc;limit:5;"); 
+						$hot_articles=sp_sql_posts("cid:$home_index_lastnews;field:post_title,post_excerpt,tid,smeta;order:post_hits desc;limit:5;");
 					</php>
 		        	<ul class="unstyled">
 		        		<foreach name="hot_articles" item="vo">

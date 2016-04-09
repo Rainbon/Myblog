@@ -58,7 +58,7 @@
 				<tr>
 					<td><input type="checkbox" class="js-check" data-yid="js-check-y" data-xid="js-check-x" name="ids[]" value="{$vo.tid}" title="ID:{$vo.tid}"></td>
 					<td><input name="listorders[{$vo.tid}]" class="input input-order" type="text" size="5" value="{$vo.listorder}" title="ID:{$vo.tid}"></td>
-					<td><a href="{:U('portal/article/index',array('id'=>$vo['tid']))}" target="_blank"> <span>{$vo.post_title}</span></a></td>
+					<td><a href="{:U('home/article/index',array('id'=>$vo['tid']))}" target="_blank"> <span>{$vo.post_title}</span></a></td>
 					<td>{$terms[$vo['term_id']]}</td>
 					<td>{$vo.post_hits}</td>
 					<td><a href="javascript:open_iframe_dialog('{:U('comment/commentadmin/index',array('post_id'=>$vo['id']))}','评论列表')">{$vo.comment_count}</a></td>
@@ -149,7 +149,7 @@
 						return false;
 					}
 					var $this = $(this);
-					art.dialog.open("__ROOT__/index.php?g=portal&m=AdminPost&a=move&ids="+ id, {
+					art.dialog.open("__ROOT__/index.php?g=home&m=AdminPost&a=move&ids="+ id, {
 						title : "批量移动",
 						width : "80%"
 					});

@@ -79,7 +79,7 @@ return array (
       ),
     ),
     array (
-      'app' => 'Portal',
+      'app' => 'Home',
       'model' => 'AdminPost',
       'action' => 'index',
       'data' => '',
@@ -92,7 +92,7 @@ return array (
       'children' => 
       array (
         array (
-          'app' => 'Portal',
+          'app' => 'Home',
           'model' => 'AdminPost',
           'action' => 'listorders',
           'data' => '',
@@ -104,7 +104,7 @@ return array (
           'listorder' => '0',
         ),
         array (
-          'app' => 'Portal',
+          'app' => 'Home',
           'model' => 'AdminPost',
           'action' => 'top',
           'data' => '',
@@ -116,7 +116,7 @@ return array (
           'listorder' => '0',
         ),
         array (
-          'app' => 'Portal',
+          'app' => 'Home',
           'model' => 'AdminPost',
           'action' => 'recommend',
           'data' => '',
@@ -128,7 +128,7 @@ return array (
           'listorder' => '0',
         ),
         array (
-          'app' => 'Portal',
+          'app' => 'Home',
           'model' => 'AdminPost',
           'action' => 'move',
           'data' => '',
@@ -140,7 +140,7 @@ return array (
           'listorder' => '1000',
         ),
         array (
-          'app' => 'Portal',
+          'app' => 'Home',
           'model' => 'AdminPost',
           'action' => 'check',
           'data' => '',
@@ -152,7 +152,7 @@ return array (
           'listorder' => '1000',
         ),
         array (
-          'app' => 'Portal',
+          'app' => 'Home',
           'model' => 'AdminPost',
           'action' => 'delete',
           'data' => '',
@@ -164,7 +164,7 @@ return array (
           'listorder' => '1000',
         ),
         array (
-          'app' => 'Portal',
+          'app' => 'Home',
           'model' => 'AdminPost',
           'action' => 'edit',
           'data' => '',
@@ -177,7 +177,7 @@ return array (
           'children' => 
           array (
             array (
-              'app' => 'Portal',
+              'app' => 'Home',
               'model' => 'AdminPost',
               'action' => 'edit_post',
               'data' => '',
@@ -191,7 +191,7 @@ return array (
           ),
         ),
         array (
-          'app' => 'Portal',
+          'app' => 'Home',
           'model' => 'AdminPost',
           'action' => 'add',
           'data' => '',
@@ -204,7 +204,7 @@ return array (
           'children' => 
           array (
             array (
-              'app' => 'Portal',
+              'app' => 'Home',
               'model' => 'AdminPost',
               'action' => 'add_post',
               'data' => '',
@@ -220,7 +220,7 @@ return array (
       ),
     ),
     array (
-      'app' => 'Portal',
+      'app' => 'Home',
       'model' => 'AdminTerm',
       'action' => 'index',
       'data' => '',
@@ -233,7 +233,7 @@ return array (
       'children' => 
       array (
         array (
-          'app' => 'Portal',
+          'app' => 'Home',
           'model' => 'AdminTerm',
           'action' => 'listorders',
           'data' => '',
@@ -245,7 +245,7 @@ return array (
           'listorder' => '0',
         ),
         array (
-          'app' => 'Portal',
+          'app' => 'Home',
           'model' => 'AdminTerm',
           'action' => 'delete',
           'data' => '',
@@ -257,7 +257,7 @@ return array (
           'listorder' => '1000',
         ),
         array (
-          'app' => 'Portal',
+          'app' => 'Home',
           'model' => 'AdminTerm',
           'action' => 'edit',
           'data' => '',
@@ -270,7 +270,7 @@ return array (
           'children' => 
           array (
             array (
-              'app' => 'Portal',
+              'app' => 'Home',
               'model' => 'AdminTerm',
               'action' => 'edit_post',
               'data' => '',
@@ -284,7 +284,7 @@ return array (
           ),
         ),
         array (
-          'app' => 'Portal',
+          'app' => 'Home',
           'model' => 'AdminTerm',
           'action' => 'add',
           'data' => '',
@@ -297,7 +297,7 @@ return array (
           'children' => 
           array (
             array (
-              'app' => 'Portal',
+              'app' => 'Home',
               'model' => 'AdminTerm',
               'action' => 'add_post',
               'data' => '',
@@ -313,7 +313,7 @@ return array (
       ),
     ),
     array (
-      'app' => 'Portal',
+      'app' => 'Home',
       'model' => 'AdminPage',
       'action' => 'index',
       'data' => '',
@@ -326,7 +326,7 @@ return array (
       'children' => 
       array (
         array (
-          'app' => 'Portal',
+          'app' => 'Home',
           'model' => 'AdminPage',
           'action' => 'listorders',
           'data' => '',
@@ -338,7 +338,7 @@ return array (
           'listorder' => '0',
         ),
         array (
-          'app' => 'Portal',
+          'app' => 'Home',
           'model' => 'AdminPage',
           'action' => 'delete',
           'data' => '',
@@ -350,7 +350,7 @@ return array (
           'listorder' => '1000',
         ),
         array (
-          'app' => 'Portal',
+          'app' => 'Home',
           'model' => 'AdminPage',
           'action' => 'edit',
           'data' => '',
@@ -363,7 +363,7 @@ return array (
           'children' => 
           array (
             array (
-              'app' => 'Portal',
+              'app' => 'Home',
               'model' => 'AdminPage',
               'action' => 'edit_post',
               'data' => '',
@@ -377,7 +377,7 @@ return array (
           ),
         ),
         array (
-          'app' => 'Portal',
+          'app' => 'Home',
           'model' => 'AdminPage',
           'action' => 'add',
           'data' => '',
@@ -390,7 +390,7 @@ return array (
           'children' => 
           array (
             array (
-              'app' => 'Portal',
+              'app' => 'Home',
               'model' => 'AdminPage',
               'action' => 'add_post',
               'data' => '',
@@ -419,7 +419,7 @@ return array (
       'children' => 
       array (
         array (
-          'app' => 'Portal',
+          'app' => 'Home',
           'model' => 'AdminPost',
           'action' => 'recyclebin',
           'data' => '',
@@ -432,7 +432,7 @@ return array (
           'children' => 
           array (
             array (
-              'app' => 'Portal',
+              'app' => 'Home',
               'model' => 'AdminPost',
               'action' => 'restore',
               'data' => '',
@@ -444,7 +444,7 @@ return array (
               'listorder' => '1000',
             ),
             array (
-              'app' => 'Portal',
+              'app' => 'Home',
               'model' => 'AdminPost',
               'action' => 'clean',
               'data' => '',
@@ -458,7 +458,7 @@ return array (
           ),
         ),
         array (
-          'app' => 'Portal',
+          'app' => 'Home',
           'model' => 'AdminPage',
           'action' => 'recyclebin',
           'data' => '',
@@ -471,7 +471,7 @@ return array (
           'children' => 
           array (
             array (
-              'app' => 'Portal',
+              'app' => 'Home',
               'model' => 'AdminPage',
               'action' => 'clean',
               'data' => '',
@@ -483,7 +483,7 @@ return array (
               'listorder' => '1000',
             ),
             array (
-              'app' => 'Portal',
+              'app' => 'Home',
               'model' => 'AdminPage',
               'action' => 'restore',
               'data' => '',

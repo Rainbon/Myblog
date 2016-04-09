@@ -6,7 +6,7 @@
 // +----------------------------------------------------------------------
 // | Author: Tuolaji <479923197@qq.com>
 // +----------------------------------------------------------------------
-namespace Portal\Controller;
+namespace Home\Controller;
 use Common\Controller\AdminbaseController;
 class AdminPostController extends AdminbaseController {
 	protected $posts_model;
@@ -15,9 +15,9 @@ class AdminPostController extends AdminbaseController {
 	
 	function _initialize() {
 		parent::_initialize();
-		$this->posts_model = D("Portal/Posts");
-		$this->terms_model = D("Portal/Terms");
-		$this->term_relationships_model = D("Portal/TermRelationships");
+		$this->posts_model = D("Home/Posts");
+		$this->terms_model = D("Home/Terms");
+		$this->term_relationships_model = D("Home/TermRelationships");
 	}
 	function index(){
 		$this->_lists();

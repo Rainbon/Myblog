@@ -450,11 +450,11 @@ function sp_get_terms($tag){
 }
 
 /**
- * 获取Portal应用当前模板下的模板列表
+ * 获取Home应用当前模板下的模板列表
  * @return array
  */
 function sp_admin_get_tpl_file_list(){
-	$template_path=C("SP_TMPL_PATH").C("SP_DEFAULT_THEME")."/Portal/";
+	$template_path=C("SP_TMPL_PATH").C("SP_DEFAULT_THEME")."/Home/";
 	$files=sp_scan_dir($template_path."*");
 	$tpl_files=array();
 	foreach ($files as $f){

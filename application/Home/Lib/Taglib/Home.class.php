@@ -6,9 +6,9 @@
 // +----------------------------------------------------------------------
 // | Author: Dean <zxxjjforever@163.com>
 // +----------------------------------------------------------------------
-namespace Portal\Lib\TagLib;
+namespace Home\Lib\TagLib;
 use Think\Template\TagLib;
-class Portal extends TagLib {
+class Home extends TagLib {
 
     /**
      * @var type 

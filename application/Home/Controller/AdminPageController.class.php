@@ -6,7 +6,7 @@
 // +----------------------------------------------------------------------
 // | Author: Tuolaji <479923197@qq.com>
 // +----------------------------------------------------------------------
-namespace Portal\Controller;
+namespace Home\Controller;
 use Common\Controller\AdminbaseController;
 class AdminPageController extends AdminbaseController {
 	protected $posts_model;
@@ -163,7 +163,7 @@ class AdminPageController extends AdminbaseController {
 	}
 	
 	public function edit_post(){
-		$terms_obj = D("Portal/Terms");
+		$terms_obj = D("Home/Terms");
 	
 		if (IS_POST) {
 			$_POST['smeta']['thumb'] = sp_asset_relative_url($_POST['smeta']['thumb']);
