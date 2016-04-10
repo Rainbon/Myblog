@@ -1,5 +1,5 @@
 <?php
 return array(
-		"List/nav_index",
+		"Category/nav_index",
 		"Page/nav_index",
 );

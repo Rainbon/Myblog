@@ -40,6 +40,7 @@ class HomebaseController extends AppframeController {
         $showlevel=6;
         $dropdown='dropdown';
         $_home_nav =  sp_get_menu("menu",$effected_id,$filetpl,$foldertpl,$ul_class,$li_class,$style,$showlevel,$dropdown);
+		$_home_nav = str_replace('list/index/id','category',$_home_nav);
         $this->assign('_home_nav',$_home_nav);
 		$this->assign('_home_public_layout', C('HOME_PUBLIC_LAYOUT'));  // 页面公共继承模版
 		

@@ -10,6 +10,12 @@ $configs = array(
         'article:index' => array('Home/article/{id}',600),
         'index:index' => array('Home/index',600),
         'list:index' => array('Home/list/{id}_{p}',60)
+    ),
+    'URL_ROUTER_ON'   => true,
+    'URL_ROUTE_RULES'=>array(
+        'article/:id'  =>'Home/Article/index?id=:1',
+        'category/:id' => 'Home/Category/index?id=:1',
+
     )
 );
 

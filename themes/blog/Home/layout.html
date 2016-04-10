@@ -20,9 +20,9 @@
     <link href="/public/blog/css/magnific-popup.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="/public/blog/css/screen.css?v=82931f6358"/>
 
-    <link rel="canonical" href="http://www.ghostchina.com/"/>
+    <link rel="canonical" href="http://ch.yeskn.com/"/>
     <meta name="referrer" content="origin"/>
-    <link rel="next" href="http://www.ghostchina.com/page/2/"/>
+    <link rel="next" href="http://ch.yeskn.com/page/2/"/>
     <script type="text/javascript" src="/public/blog/js/ghost-url.min.js?v=82931f6358"></script>
     <script type="text/javascript">
         ghost.init({
@@ -30,8 +30,8 @@
             clientSecret: "721352203d6a"
         });
     </script>
-    <meta name="generator" content="Ghost 0.7"/>
-    <link rel="alternate" type="application/rss+xml" title="Ghost 开源博客平台" href="http://www.ghostchina.com/rss/"/>
+    <meta name="generator" content="夜色空凝 - 彩虹"/>
+    <link rel="alternate" type="application/rss+xml" title="夜色空凝 - 彩虹" href="http://ch.yeskn.com/rss/"/>
     <block name="head-css"></block>
 </head>
 <body class="home-template">
@@ -46,11 +46,11 @@
             <div class="col-sm-12">
 
                 <!-- start logo -->
-                <a class="branding" href="http://www.ghostchina.com" title="Ghost 开源博客平台"><img
+                <a class="branding" href="http://ch.yeskn.com" title="夜色空凝 - 彩虹"><img
                         src="/public/blog/images/logo.png"
-                        alt="Ghost 开源博客平台"></a>
+                        alt="夜色空凝 - 彩虹"></a>
                 <!-- end logo -->
-                <h2 class="text-hide">Ghost 是一个简洁、强大的写作平台。你只须专注于用文字表达你的想法就好，其余的事情就让 Ghost 来帮你处理吧。</h2>
+                <h2 class="text-hide">夜色空凝 - 彩虹</h2>
             </div>
         </div>
     </div>
@@ -95,49 +95,7 @@
     <div class="container">
         <aside class="row">
             <block name="main">主要区域</block>
-            <block name="sidebar">
-           <aside class="col-md-4 sidebar">
-               <!-- start widget -->
-               <!-- end widget -->
-
-               <!-- start tag cloud widget -->
-               <div class="widget">
-                   <h4 class="title">日历</h4>
-               </div>
-               <!-- end tag cloud widget -->
-
-               <!-- start tag cloud widget -->
-               <div class="widget">
-                   <h4 class="title">我的日常</h4>
-                   <div class="content community">
-                       <p>QQ：2508078818</p>
-                       <p><a href="https://github.com/Rainbon" title="我的github" target="_blank"
-                             onclick="_hmt.push(['_trackEvent', 'big-button', 'click', '我的github'])"><i
-                               class="fa fa-comments"></i> Github</a></p>
-                       <p><a href="http://getbootstrap.com" title="bootstrap" target="_blank"
-                             onclick="_hmt.push(['_trackEvent', 'big-button', 'click', '官方微博'])"><i
-                               class="fa fa-weibo"></i> Bootstrap</a></p>
-                   </div>
-               </div>
-               <!-- end tag cloud widget -->
-
-               <!-- start tag cloud widget -->
-               <div class="widget">
-                   <h4 class="title">文章列表</h4>
-               </div>
-               <!-- end tag cloud widget -->
-
-               <!-- start widget -->
-               <div class="widget">
-                   <h4 class="title">下载 Bootstrap</h4>
-                   <div class="content download">
-                       <a href="/download/" class="btn btn-default btn-block"
-                          onclick="_hmt.push(['_trackEvent', 'big-button', 'click', '下载Bootstrap'])">Bootstrap
-                           中文版（0.6.0）</a>
-                   </div>
-               </div>
-           </aside>
-       </block>
+            <block name="sidebar"><include file="blog:Home:Block:sidebar" /></block>
         </aside>
     </div>
 </section>
@@ -148,10 +106,9 @@
             <div class="col-sm-4">
                 <div class="widget">
                     <h4 class="title">友情链接</h4>
-                    <a href="http://www.imooc.com/course/list" >慕课网</a><br/>
-                    <a href="http://www.jikexueyuan.com/" >极客学院</a><br/>
-                    <a href="http://www.zhangxinxu.com/wordpress/" >张鑫旭</a><br/>
-                    <a href="http://www.cnblogs.com/cate/108703/" >博客园</a><br/>
+                    <a href="http://www.yeskn.com" >夜色空凝</a><br/>
+                    <a href="https://www.zhihu.com/people/jaking" >Jake的知乎</a><br/>
+                    <a href="https://www.zhihu.com/people/deng-cai-hong" >我的知乎</a><br/>
                 </div>
             </div>
 
@@ -208,17 +165,6 @@
 
             $(this).wrap('<a href="' + src + '" class="mfp-zoom" style="display:block;"></a>');
         });
-    });
-</script>
-
-
-<script>
-    $(function () {
-        var version = '0.7.4';
-        var $download = $('.download > a').first();
-        var html = $download.html().replace(/\d\.\d\.\d/, version);
-
-        $download.html(html);
     });
 </script>
 
