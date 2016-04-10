@@ -68,12 +68,12 @@
 									<input type='hidden' name='smeta[thumb]' id='thumb' value="{$smeta.thumb|default=''}">
 									<a href='javascript:void(0);' onclick="flashupload('thumb_images', '附件上传','thumb',thumb_images,'1,jpg|jpeg|gif|png|bmp,1,,,1','','','');return false;">
 										<if condition="empty($smeta['thumb'])">
-											<img src="__TMPL__Public/assets/images/default-thumbnail.png" id='thumb_preview' width='135' height='113' style='cursor: hand' />
+											<img src="__TMPL__public/assets/images/default-thumbnail.png" id='thumb_preview' width='135' height='113' style='cursor: hand' />
 										<else />
 											<img src="{:sp_get_asset_upload_path($smeta['thumb'])}" id='thumb_preview' width='135' height='113' style='cursor: hand' />
 										</if>
 									</a>
-									<input type="button" class="btn btn-small" onclick="$('#thumb_preview').attr('src','__TMPL__Public/assets/images/default-thumbnail.png');$('#thumb').val('');return false;" value="取消图片">
+									<input type="button" class="btn btn-small" onclick="$('#thumb_preview').attr('src','__TMPL__public/assets/images/default-thumbnail.png');$('#thumb').val('');return false;" value="取消图片">
 								</div>
 							</td>
 						</tr>
