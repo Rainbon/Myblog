@@ -16,7 +16,9 @@ class ArticleController extends HomebaseController {
     public function index() {
 		$id = intval($_GET['id']);
 		$post = M('posts')->where(['id'=>$id])->find();
+        $post['author_name'] = M('Users')->where(['id'=>$post['post_author']])->getField('user_nicename');
+        $post['show_date']   = date('Y年m月d日',strtotime($post['post_date']));
         $this->assign('post',$post);
-        $this->display(':post');
+        $this->display('Home:post');
     }
 }

@@ -4,7 +4,12 @@ use Think\Controller;
 
 class AppframeController extends Controller {
 
-    function _initialize() {
+	function __construct()
+	{
+		parent::__construct();
+	}
+
+	function _initialize() {
         $this->assign("waitSecond", 3);
        	$time=time();
         $this->assign("js_debug",APP_DEBUG?"?v=$time":"");

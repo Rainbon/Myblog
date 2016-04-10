@@ -30,10 +30,17 @@ class HomebaseController extends AppframeController {
 			}else{
 			}
 		}
-		
-		if(sp_is_user_login()){
-			$this->assign("user",sp_get_current_user());
-		}
+
+        $effected_id="menu";
+        $filetpl="<a href='\$href' target='\$target'>\$label</a>";
+        $foldertpl="<a href='\$href' target='\$target' class='dropdown-toggle' data-toggle='dropdown'>\$label <b class='caret'></b></a>";
+        $ul_class="dropdown-menu" ;
+        $li_class="" ;
+        $style="menu";
+        $showlevel=6;
+        $dropdown='dropdown';
+        $_home_nav =  sp_get_menu("menu",$effected_id,$filetpl,$foldertpl,$ul_class,$li_class,$style,$showlevel,$dropdown);
+        $this->assign('_home_nav',$_home_nav);
 		$this->assign('_home_public_layout', C('HOME_PUBLIC_LAYOUT'));  // 页面公共继承模版
 		
 	}
@@ -106,8 +113,10 @@ class HomebaseController extends AppframeController {
 	 * @return mixed
 	 */
 	public function display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') {
+		parent::display($templateFile, $charset, $contentType, $content, $prefix);
 		//echo $this->parseTemplate($templateFile);
-		parent::display($this->parseTemplate($templateFile), $charset, $contentType);
+		//@Jake
+		//parent::display($this->parseTemplate($templateFile), $charset, $contentType);
 	}
 	
 	/**

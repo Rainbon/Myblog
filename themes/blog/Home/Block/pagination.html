@@ -1,0 +1,20 @@
+{// pn.prev_link  -    上一页id }
+{// pn.next_link  -    下一页id }
+{// pn.numbers    -    数字链接 }
+<ul class="pagination">
+    <li><span>共有{$pn.total_rows}条记录</span></li>
+    <li><a href="{$pn.prev_link}" class="same">上一页</a></li>
+
+    <volist name="pn.numbers" id="num">
+        <?php
+            if($num['num'] == $pn['now_page'])
+                $current_style = 'class="active pleft"';
+            else
+                $current_style = '';
+         ?>
+
+        <li {$current_style}><a  href="{$num.link}">{$num.num}</a></li>
+    </volist>
+    <li class="pleft"><a href="{$pn.next_link}" class="same">下一页</a></li>
+    <li class="pleft"><span class="same">共{$pn.total_pages}页</span></li>
+</ul>

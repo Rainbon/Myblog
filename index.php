@@ -1,8 +1,5 @@
 <?php
-/**
- * 入口文件
- * Some rights reserved：ch.yeskn.com
- */
+
 if (ini_get('magic_quotes_gpc')) {
 	function stripslashesRecursive(array $array){
 		foreach ($array as $k => $v) {
@@ -24,11 +21,13 @@ define('SITE_PATH', dirname(__FILE__)."/");
 //项目路径，不可更改
 define('APP_PATH', SITE_PATH . 'application/');
 //项目相对路径，不可更改
-define('SPAPP_PATH',   SITE_PATH.'simplewind/');
-//
+define('SPAPP_PATH',   SITE_PATH.'kernel/');
+
+/**
+ * 应用路径
+ */
 define('SPAPP',   './application/');
-//项目资源目录，不可更改
-define('SPSTATIC',   SITE_PATH.'statics/');
+
 //定义缓存存放路径
 define("RUNTIME_PATH", SITE_PATH . "data/runtime/");
 //静态缓存目录

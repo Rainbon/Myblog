@@ -1,277 +1,50 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-    <meta charset="utf-8"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<extend name="$_home_public_layout"/>
 
-    <title>{$post.post_title}</title>
-    <meta name="description"
-          content="{$post.post_title}"/>
-    <meta name="keywords" content="{$post.post_title}">
+<block name="title"><title>夜色空凝 - 彩虹 | {$post.post_title}</title></block>
 
-    <meta name="HandheldFriendly" content="True"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<block name="head-css">
+    <link rel="stylesheet" href="/public/blog/libs/sh/styles/shCoreDefault.css">
 
-    <link rel="shortcut icon" href="/public/blog/images/favicon.ico">
+</block>
 
-    <link rel="stylesheet" href="/public/blog/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/public/blog/css/font-awesome.min.css">
-    <link rel="stylesheet" href="/public/blog/css/monokai_sublime.min.css">
-    <link href="/public/blog/css/magnific-popup.min.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="/public/blog/css/screen.css?v=82931f6358"/>
 
-    <link rel="canonical" href="http://www.ghostchina.com/"/>
-    <meta name="referrer" content="origin"/>
-    <link rel="next" href="http://www.ghostchina.com/page/2/"/>
-    <script type="text/javascript" src="/public/blog/js/ghost-url.min.js?v=82931f6358"></script>
-    <script type="text/javascript">
-        ghost.init({
-            clientId: "ghost-frontend",
-            clientSecret: "721352203d6a"
-        });
-    </script>
-    <meta name="generator" content="Ghost 0.7"/>
-    <link rel="alternate" type="application/rss+xml" title="邓彩虹的博客" href="http://www.ch.yeskn.com/rss/"/>
+
+<block name="main">
+    <main class="col-md-8 main-content">
+
+        <article id={$post.id} class="post">
+
+            <div class="post-head">
+                <h1 class="post-title"><a href="">{$post.post_title}</a></h1>
+                <div class="post-meta">
+                    <span class="author">作者：<a href="#">{$post.author_name}</a></span> &bull;
+                    <time class="post-date" datetime=" {$post.show_date}" title="{$post.show_date}">
+                        {$post.show_date}
+                    </time>
+                </div>
+            </div>
+            <div class="post-content">
+                {$post.post_content}
+            </div>
+
+            <footer class="post-footer clearfix">
+                <div class="pull-left tag-list">
+                    <i class="fa fa-folder-open-o"></i>
+                    {$post.post_keywords}
+                </div>
+                <div class="pull-right share">
+                </div>
+            </footer>
+        </article>
+
+    </main>
+</block>
+
+<block name="foot_js">
     <script src="/public/blog/libs/sh/scripts/shCore.js"></script>
     <script src="/public/blog/libs/sh/scripts/shBrushJScript.js"></script>
     <script src="/public/blog/libs/sh/scripts/shBrushXml.js"></script>
     <script src="/public/blog/libs/sh/scripts/shBrushCss.js"></script>
     <script src="/public/blog/libs/sh/scripts/shBrushPhp.js"></script>
-
-    <link rel="stylesheet" href="/public/blog/libs/sh/styles/shCoreDefault.css">
     <script type="text/javascript">SyntaxHighlighter.all();</script>
-</head>
-<body class="home-template">
-
-<!-- start header -->
-<header class="main-header" style="background-image: url('/public/blog/images/ad2.jpg')">
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-12">
-
-                <!-- start logo -->
-                <a class="branding" href="http://www.ghostchina.com" title="Ghost 开源博客平台"><img
-                        src="http://static.ghostchina.com/image/b/46/4f5566c1f7bc28b3f7ac1fada8abe.png"
-                        alt="Ghost 开源博客平台"></a>
-                <!-- end logo -->
-                <h2 class="text-hide">Ghost 是一个简洁、强大的写作平台。你只须专注于用文字表达你的想法就好，其余的事情就让 Ghost 来帮你处理吧。</h2>
-
-                <img src="http://static.ghostchina.com/image/6/d1/fcb3879e14429d75833a461572e64.jpg" alt="Ghost 博客系统"
-                     class="hide">
-            </div>
-        </div>
-    </div>
-</header>
-<!-- end header -->
-
-<!-- start navigation -->
-<nav class="main-navigation">
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-12">
-                <div class="navbar-header">
-                        <span class="nav-toggle-button collapsed" data-toggle="collapse" data-target="#main-menu">
-                        <span class="sr-only">Toggle navigation</span>
-                        <i class="fa fa-bars"></i>
-                        </span>
-                </div>
-                <div class="collapse navbar-collapse" id="main-menu">
-                    <ul class="menu">
-                        <li class="nav-current" role="presentation"><a href="/">首页</a></li>
-                        <li role="presentation"><a href="">web技术</a></li>
-                        <li role="presentation"><a href="">生活</a></li>
-                        <li role="presentation"><a href="">作品展示</a></li>
-                        <li role="presentation"><a href="">参考资料</a></li>
-                        <li role="presentation"><a href="/about/">关于</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-</nav>
-<!-- end navigation -->
-
-<!-- start site's main content area -->
-<section class="content-wrap">
-    <div class="container">
-        <aside class="row">
-
-            <main class="col-md-8 main-content">
-
-
-                <article id={$post.id} class="post">
-
-                    <div class="post-head">
-                        <h1 class="post-title"><a href="">{$post.post_title}</a></h1>
-                        <div class="post-meta">
-                            <span class="author">作者：<a href="#">{$post.author_name}</a></span> &bull;
-                            <time class="post-date" datetime="2016年3月23日星期三凌晨12点08分" title="2016年3月23日星期三凌晨12点08分">
-                                2016年3月23日
-                            </time>
-                        </div>
-                    </div>
-                    <div class="post-content">
-                        {$post.post_content}
-                    </div>
-
-
-                    <footer class="post-footer clearfix">
-                        <div class="pull-left tag-list">
-                            <i class="fa fa-folder-open-o"></i>
-
-                        </div>
-                        <div class="pull-right share">
-                        </div>
-                    </footer>
-                </article>
-
-            </main>
-
-            <div class="col-md-4 sidebar">
-                <!-- start widget -->
-                <!-- end widget -->
-
-                <!-- start tag cloud widget -->
-                <div class="widget">
-                    <h4 class="title">日历</h4>
-                </div>
-                <!-- end tag cloud widget -->
-
-                <!-- start tag cloud widget -->
-                <div class="widget">
-                    <h4 class="title">我的日常</h4>
-                    <div class="content community">
-                        <p>QQ：2508078818</p>
-                        <p><a href="https://github.com/Rainbon" title="我的github" target="_blank"
-                              onclick="_hmt.push(['_trackEvent', 'big-button', 'click', '我的github'])"><i
-                                class="fa fa-comments"></i> Github</a></p>
-                        <p><a href="http://getbootstrap.com" title="bootstrap" target="_blank"
-                              onclick="_hmt.push(['_trackEvent', 'big-button', 'click', '官方微博'])"><i
-                                class="fa fa-weibo"></i> Bootstrap</a></p>
-                    </div>
-                </div>
-                <!-- end tag cloud widget -->
-
-                <!-- start tag cloud widget -->
-                <div class="widget">
-                    <h4 class="title">文章列表</h4>
-                </div>
-                <!-- end tag cloud widget -->
-
-                <!-- start widget -->
-                <div class="widget">
-                    <h4 class="title">下载 Bootstrap</h4>
-                    <div class="content download">
-                        <a href="/download/" class="btn btn-default btn-block"
-                           onclick="_hmt.push(['_trackEvent', 'big-button', 'click', '下载Bootstrap'])">Bootstrap
-                            中文版（0.6.0）</a>
-                    </div>
-                </div>
-        </div>
-            </aside>
-    </div>
-</section>
-
-<footer class="main-footer">
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-4">
-                <div class="widget">
-                    <h4 class="title">友情链接</h4>
-                    <a href="http://www.imooc.com/course/list" >慕课网</a><br/>
-                    <a href="http://www.jikexueyuan.com/" >极客学院</a><br/>
-                    <a href="http://www.zhangxinxu.com/wordpress/" >张鑫旭</a><br/>
-                    <a href="http://www.cnblogs.com/cate/108703/" >博客园</a><br/>
-                </div>
-            </div>
-
-            <div class="col-sm-4">
-                <div class="widget">
-                    <h4 class="title">标签云</h4>
-                    <div class="content tag-cloud">
-                        <a href="/tag/about-ghost/">Ghost</a>
-                        <a href="/tag/release/">新版本发布</a>
-                        <a href="/tag/javascript/">JavaScript</a>
-                        <a href="/tag/promise/">Promise</a>
-                        <a href="/tag/zhuti/">主题</a>
-                        <a href="/tag/nodejs/">Node.js</a>
-                        <a href="/tag/mysql/">MySQL</a>
-                        <a href="/tag/nginx/">Nginx</a>
-                        <a href="/tag/aliyun-ecs/">阿里云服务器</a>
-                        <a href="/tag/ubuntu/">Ubuntu</a>
-                        <a href="/tag/ghost-in-depth/">深度玩转 Ghost</a>
-                        <a href="/tag/theme/">Theme</a>
-                        <a href="/tag/markdown/">Markdown</a>
-                        <a href="/tag/proxy/">反向代理</a>
-                        <a href="/tag/apache/">Apache</a>
-
-                        <a href="/tag-cloud/">...</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-sm-4">
-                <div class="widget">
-                    <h4 class="title">合作伙伴</h4>
-                    <div class="content tag-cloud friend-links">
-                        <a href="http://www.bootcss.com" title="Bootstrap中文网" onclick="_hmt.push(['_trackEvent', 'link', 'click', 'bootcsscom'])" target="_blank">Bootstrap中文网</a>
-                        <a href="http://www.bootcdn.cn" title="开放CDN服务" onclick="_hmt.push(['_trackEvent', 'link', 'click', 'bootcdncn'])" target="_blank">开放CDN服务</a>
-                        <a href="http://www.gruntjs.net" title="Grunt中文网" onclick="_hmt.push(['_trackEvent', 'link', 'click', 'gruntjsnet'])" target="_blank">Grunt中文网</a>
-                        <a href="http://www.gulpjs.com.cn/" title="Gulp中文网" onclick="_hmt.push(['_trackEvent', 'link', 'click', 'gulpjscomcn'])" target="_blank">Gulp中文网</a>
-                        <hr>
-                        <a href="http://lodashjs.com/" title="Lodash中文文档" onclick="_hmt.push(['_trackEvent', 'link', 'click', 'lodashjscom'])" target="_blank">Lodash中文文档</a>
-                        <a href="http://www.jquery123.com/" title="jQuery中文文档" onclick="_hmt.push(['_trackEvent', 'link', 'click', 'jquery123com'])" target="_blank">jQuery中文文档</a>
-                        <hr>
-                        <a href="http://www.aliyun.com/" title="阿里云" onclick="_hmt.push(['_trackEvent', 'link', 'click', 'aliyun'])" target="_blank">阿里云</a>
-                        <hr>
-                        <a href="https://www.upyun.com/" title="又拍云" onclick="_hmt.push(['_trackEvent', 'link', 'click', 'upyun'])" target="_blank">又拍云</a>
-                        <a href="http://www.ucloud.cn/" title="UCloud" onclick="_hmt.push(['_trackEvent', 'link', 'click', 'ucloud'])" target="_blank">UCloud</a>
-                        <a href="http://www.qiniu.com/" title="七牛云存储" onclick="_hmt.push(['_trackEvent', 'link', 'click', 'qiniu'])" target="_blank">七牛云存储</a>
-                    </div>
-                </div></div>
-        </div>
-    </div>
-</footer>
-
-<div class="copyright">
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-12">
-                <span>Copyright &copy; | <a href="#">@彩虹妹</a></span>
-            </div>
-        </div>
-    </div>
-</div>
-
-<a href="#" id="back-to-top"><i class="fa fa-angle-up"></i></a>
-
-<script src="/public/blog/js/jquery.min.js"></script>
-<script src="/public/blog/js/bootstrap.min.js"></script>
-<script src="/public/blog/js/jquery.fitvids.min.js"></script>
-<script src="/public/blog/js/highlight.min.js"></script>
-<script src="/public/blog/js/jquery.magnific-popup.min.js"></script>
-<script src="/public/blog/js/main.js?v=82931f6358"></script>
-<script>
-    $(function () {
-        $('.post-content img').each(function (item) {
-            var src = $(this).attr('src');
-
-            $(this).wrap('<a href="' + src + '" class="mfp-zoom" style="display:block;"></a>');
-        });
-    });
-</script>
-
-
-<script>
-    $(function () {
-        var version = '0.7.4';
-        var $download = $('.download > a').first();
-        var html = $download.html().replace(/\d\.\d\.\d/, version);
-
-        $download.html(html);
-    });
-</script>
-
-
-</body>
-</html>
+</block>

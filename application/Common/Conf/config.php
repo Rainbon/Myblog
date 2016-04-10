@@ -94,7 +94,13 @@ $configs= array(
         	'__STATICS__' => __ROOT__.'/statics/',
         ),
 
-		'HOME_PUBLIC_LAYOUT'  => APP_PATH.'Home/View/Public/layout.html',
+		
 );
 
-return  array_merge($configs,$db,$runtime_config);
+$layout_config = array(
+	'VIEW_PATH'=>'./themes/',
+	'DEFAULT_THEME'    =>    'blog',
+    'HOME_PUBLIC_LAYOUT'  => SITE_PATH.$configs['SP_TMPL_PATH'].$configs['SP_DEFAULT_THEME'].'/Home/layout.html',
+);
+
+return  array_merge($configs,$db,$runtime_config,$layout_config);

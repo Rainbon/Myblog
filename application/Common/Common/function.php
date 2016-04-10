@@ -1,5 +1,17 @@
 <?php
 
+
+function mb_get_post_list($where = ''){
+    $posts = M('Posts')->where($where)->order('post_date desc')->limit(10)->select();
+    if($posts){
+        foreach ($posts as $key => $value){
+            $posts[$key]['author_name'] = M('Users')->where(['id'=>$value['post_author']])->getField('user_nicename');
+            $posts[$key]['show_date']   = date('Y年m月d日',strtotime($posts[$key]['post_date']));
+        }
+    }
+    return $posts;
+}
+
 /**
  * 获取当前登录的管事员id
  * @return int
@@ -467,7 +479,7 @@ hello;
  </ul>
  */
 
-function sp_get_menu($id="main",$effected_id="mainmenu",$filetpl="<span class='file'>\$label</span>",$foldertpl="<span class='folder'>\$label</span>",$ul_class="" ,$li_class="" ,$style="filetree",$showlevel=6,$dropdown='hasChild'){
+function sp_get_menu($id="menu",$effected_id="menu",$filetpl="<span class='file'>\$label</span>",$foldertpl="<span class='folder'>\$label</span>",$ul_class="" ,$li_class="" ,$style="filetree",$showlevel=6,$dropdown='hasChild'){
 	$navs=F("site_nav_".$id);
 	if(empty($navs)){
 		$navs=_sp_get_menu_datas($id);
@@ -476,7 +488,8 @@ function sp_get_menu($id="main",$effected_id="mainmenu",$filetpl="<span class='f
 	import("Tree");
 	$tree = new \Tree();
 	$tree->init($navs);
-	return $tree->get_treeview_menu(0,$effected_id, $filetpl, $foldertpl,  $showlevel,$ul_class,$li_class,  $style,  1, FALSE, $dropdown);
+	$rn = $tree->get_treeview_menu(0,$effected_id, $filetpl, $foldertpl,  $showlevel,$ul_class,$li_class,  $style,  1, FALSE, $dropdown);
+	return $rn;
 }
 
 
@@ -610,7 +623,7 @@ function sp_get_apphome_tpl($tplname,$default_tplname,$default_theme=""){
 	}else if(file_exists_case($defaultpl)){
 		$tplname=$default_tplname;
 	}else{
-		$tplname="404";
+        throw new mysqli_sql_exception("模板 $tplpath 不存在");
 	}
 	return $tplname;
 }

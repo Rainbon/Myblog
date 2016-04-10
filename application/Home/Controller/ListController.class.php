@@ -29,9 +29,21 @@ class ListController extends HomebaseController {
 		
 		$tplname=$term["list_tpl"];
     	$tplname=sp_get_apphome_tpl($tplname, "list");
-    	$this->assign($term);
+    	$this->assign('term',$term);
     	$this->assign('cat_id', intval($_GET['id']));
-    	$this->display(":$tplname");
+        //$child_term = M('Nav')->where(['parentid'=>$term['term_id']])->getField('id');
+        $postIdArray = M('Term_relationships')->where(array('term_id'=>$term['term_id']))->field('object_id')->select();
+        $post_ids = array();
+        foreach ($postIdArray as $key => $value){
+            $post_ids[] = $value['object_id'];
+        }
+        if(!$post_ids)
+        {
+            $post_ids = ['0'];
+        }
+		$posts = mb_get_post_list(array('id'=>array('in',$post_ids)));
+        $this->assign('posts',$posts);
+    	$this->display("Home:$tplname");
 	}
 	
 	public function nav_index(){
