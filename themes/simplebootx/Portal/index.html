@@ -5,7 +5,7 @@
 		<meta name="keywords" content="{$site_seo_keywords}" />
 		<meta name="description" content="{$site_seo_description}">
 		<tc_include file="Public:head" />
-		<link href="__TMPL__Public/css/slippry/slippry.css" rel="stylesheet">
+		<link href="__TMPL__public/css/slippry/slippry.css" rel="stylesheet">
 		<style>
 			.caption-wraper{position: absolute;left:50%;bottom:2em;}
 			.caption-wraper .caption{
@@ -104,7 +104,7 @@ $home_slides=empty($home_slides)?$default_home_slides:$home_slides;
 					<div class="item-image">
 						<a href="{:leuu('article/index',array('id'=>$vo['tid'],'cid'=>$vo['term_id']))}">
 							<if condition="empty($smeta['thumb'])"> 
-								<img src="__TMPL__Public/images/default_tupian1.png" class="img-responsive" alt="{$vo.post_title}"/>
+								<img src="__TMPL__public/images/default_tupian1.png" class="img-responsive" alt="{$vo.post_title}"/>
 							<else /> 
 								<img src="{:sp_get_asset_upload_path($smeta['thumb'])}" class="img-responsive img-thumbnail" alt="{$vo.post_title}" />
 							</if>
@@ -124,7 +124,7 @@ $home_slides=empty($home_slides)?$default_home_slides:$home_slides;
 </div>
 
 <tc_include file="Public:scripts"/>
-<script src="__TMPL__Public/js/slippry.min.js"></script>
+<script src="__TMPL__public/js/slippry.min.js"></script>
 <script>
 $(function() {
 	var demo1 = $("#homeslider").slippry({

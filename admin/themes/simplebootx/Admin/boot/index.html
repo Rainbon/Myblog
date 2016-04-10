@@ -153,7 +153,7 @@ right: initial !important;}
 		<div class="navbar-inner">
 			<div class="container-fluid">
 				<a href="{:U('index/index')}" class="brand"> <small> 
-				<img src="__TMPL__Public/assets/images/logo-18.png">
+				<img src="__TMPL__public/assets/images/logo-18.png">
 						夜色空凝 - 彩虹 {:L('ADMIN_CENTER')}
 				</small>
 				</a>
@@ -187,7 +187,7 @@ right: initial !important;}
     						<if condition="$admin['avatar']">
 								<img class="nav-user-photo" width="30" height="30" src="{:sp_get_user_avatar_url($admin['avatar'])}" alt="{$admin.user_login}">
 							<else />
-								<img class="nav-user-photo" width="30" height="30" src="__TMPL__Public/assets/images/logo-18.png" alt="{$admin.user_login}">
+								<img class="nav-user-photo" width="30" height="30" src="__TMPL__public/assets/images/logo-18.png" alt="{$admin.user_login}">
 							</if>
 							<span class="user-info">
 								{:L('WELCOME_USER',array('username'=>empty($admin['user_nicename'])?$admin['user_login']:$admin['user_nicename']))}
@@ -201,7 +201,7 @@ right: initial !important;}
 							<if condition="sp_auth_check(sp_get_current_admin_id(),'admin/user/userinfo')">
 								<li><a href="javascript:openapp('{:U('user/userinfo')}','index_userinfo','{:L('ADMIN_USER_USERINFO')}');"><i class="fa fa-user"></i> {:L('ADMIN_USER_USERINFO')}</a></li>
 							</if>
-							<li><a href="{:U('Public/logout')}"><i class="fa fa-sign-out"></i> {:L('LOGOUT')}</a></li>
+							<li><a href="{:U('public/logout')}"><i class="fa fa-sign-out"></i> {:L('LOGOUT')}</a></li>
 						</ul>
 					</li>
 				</ul>
@@ -279,6 +279,6 @@ right: initial !important;}
 		return false;
 	});
 	</script>
-	<script src="__TMPL__Public/assets/js/index.js"></script>
+	<script src="__TMPL__public/assets/js/index.js"></script>
 </body>
 </html>
