@@ -1,5 +1,18 @@
 <?php
 
+function yeskn_url()
+{
+    $args = func_get_args();
+    $num = func_num_args();
+    switch ($num){
+        case 2:
+            echo "/$args[0]/$args[1]";
+            break;
+        default:
+            echo "使用yeskn_url函数出错";
+
+    }
+}
 
 function mb_get_post_list($where = ''){
     $posts = M('Posts')->where($where)->order('post_date desc')->limit(10)->select();

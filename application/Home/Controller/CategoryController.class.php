@@ -13,7 +13,7 @@ use Think\Page;
 /**
  * 文章列表
 */
-class ListController extends HomebaseController {
+class CategoryController extends HomebaseController {
 
 	//文章内页
 	public function index() {
