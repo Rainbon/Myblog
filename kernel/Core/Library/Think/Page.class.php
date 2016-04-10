@@ -20,7 +20,7 @@ class Page{
     public $lastSuffix = true; // 最后一页是否显示总页数
     public $pn; /// 分页数据
 
-    private $p       = 'p'; //分页参数名
+    private $p       = 'page'; //分页参数名
     private $url     = ''; //当前链接URL
     private $nowPage = 1;
 
@@ -49,6 +49,8 @@ class Page{
         $this->nowPage    = empty($_GET[$this->p]) ? 1 : intval($_GET[$this->p]);
         $this->nowPage    = $this->nowPage>0 ? $this->nowPage : 1;
         $this->firstRow   = $this->listRows * ($this->nowPage - 1);
+        //var_dump($this->p);
+        //var_dump($_GET);
     }
 
     /**
@@ -82,7 +84,9 @@ class Page{
 
         /* 生成URL */
         $this->parameter[$this->p] = '[PAGE]';
-        $this->url = U(ACTION_NAME, $this->parameter);
+        $this->url = '/page/%5BPAGE%5D';
+        //$this->url = U(ACTION_NAME, $this->parameter);
+        //var_dump($this->url);
         /* 计算分页信息 */
         $this->totalPages = ceil($this->totalRows / $this->listRows); //总页数
         if(!empty($this->totalPages) && $this->nowPage > $this->totalPages) {

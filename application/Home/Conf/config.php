@@ -13,7 +13,8 @@ $configs = array(
     ),
     'URL_ROUTER_ON'   => true,
     'URL_ROUTE_RULES'=>array(
-        'article/:id'  =>'Home/Article/index?id=:1',
+        'page/:id'     => 'Home/Index/index?page=:1',
+        'article/:id'  => 'Home/Article/index?id=:1',
         'category/:id' => 'Home/Category/index?id=:1',
 
     )

@@ -76,7 +76,7 @@ $configs= array(
         'URL_PATHINFO_DEPR'     => '/',	// PATHINFO模式下，各参数之间的分割符号
         'URL_HTML_SUFFIX'       => '',  // URL伪静态后缀设置
         
-        'VAR_PAGE'				=>"p",
+        'VAR_PAGE'				=>"page",
         
         'URL_ROUTER_ON'			=> true,
         'URL_ROUTE_RULES'       => $routes,
