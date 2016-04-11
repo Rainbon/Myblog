@@ -28,7 +28,6 @@ class SidebarWidget extends Controller
         $list = $postModel->field('id,post_date')
             ->where(['post_status'=>1])
             ->order('post_date desc')
-            ->limit(10)
             ->select();
         
         function format_date($date)
@@ -56,7 +55,7 @@ class SidebarWidget extends Controller
 
     public function hotTags()
     {
-        $data = M('Tags')->order('count desc')->select();
+        $data = M('Tags')->order('count desc')->limit(10)->select();
         $this->assign('data',$data);
         $this->display('Home:Widget:hotTags');
     }
