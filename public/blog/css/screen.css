@@ -880,3 +880,11 @@ pre {
   height: 30px;
   line-height: 30px;
 }
+.content.community ul li{
+  margin-left: 10px;
+  list-style-type: none;
+  color: #000000 !important;
+}
+.content.community ul li:hover{
+  color: #e67e22;
+}
