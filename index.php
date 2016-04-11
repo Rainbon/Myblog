@@ -54,6 +54,7 @@ if(file_exists(UC_CLIENT_ROOT."config.inc.php")){
 	include UC_CLIENT_ROOT."config.inc.php";
 }
 
+session_name('_yesknUniqueId');
 //载入框架核心文件
 require SPAPP_PATH.'Core/ThinkPHP.php';
 
