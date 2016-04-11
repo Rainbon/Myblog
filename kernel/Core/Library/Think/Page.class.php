@@ -70,6 +70,10 @@ class Page{
      * @return string
      */
     private function url($page){
+        if(MODULE_NAME === 'Home' && CONTROLLER_NAME !== 'Index'){
+
+            return str_replace('?'.$_SERVER["QUERY_STRING"],'',$_SERVER["REQUEST_URI"])."?page=".$page;
+        }
         return str_replace(urlencode('[PAGE]'), $page, $this->url);
     }
 
