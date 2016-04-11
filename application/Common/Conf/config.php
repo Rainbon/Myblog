@@ -17,6 +17,7 @@ if (file_exists("data/conf/route.php")) {
 }
 
 $configs= array(
+		'SESSION_AUTO_START' =>false,
         "LOAD_EXT_FILE"=>"extend",
         'UPLOADPATH' => 'data/upload/',
         //'SHOW_ERROR_MSG'        =>  true,    // 显示错误信息
