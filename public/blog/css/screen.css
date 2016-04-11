@@ -880,11 +880,30 @@ pre {
   height: 30px;
   line-height: 30px;
 }
-.content.community ul li{
-  margin-left: 10px;
+.mylabel ul{
+  width: 300px;
   list-style-type: none;
-  color: #000000 !important;
+  margin-left: -50px;
 }
-.content.community ul li:hover{
-  color: #e67e22;
+.mylabel ul li a{
+  display: block;
+  text-decoration: none;
+  color: #000000 ;
+  width: 300px;
+  height:30px;
+  line-height: 30px;
+  padding-left: 10px;
+}
+.mylabel ul li a span{
+  color: #cccccc;
+}
+.mylabel ul li a:hover{
+  background-color: #e67e22;
+  color: #FFFFFF !important;
+}
+.mylabel ul li a:hover{
+  color: #000;
+}
+.mylabel ul li:last-child a:hover{
+  background-color: #cccccc;
 }
