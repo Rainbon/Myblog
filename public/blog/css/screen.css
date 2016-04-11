@@ -880,12 +880,12 @@ pre {
   height: 30px;
   line-height: 30px;
 }
-.mylabel ul{
+.mylabel ul,.article ul{
   width: 300px;
-  list-style-type: none;
+  list-style-type: none !important;
   margin-left: -50px;
 }
-.mylabel ul li a{
+.mylabel ul li a,.article ul li a{
   display: block;
   text-decoration: none;
   color: #000000 ;
@@ -894,16 +894,26 @@ pre {
   line-height: 30px;
   padding-left: 10px;
 }
-.mylabel ul li a span{
-  color: #cccccc;
+.mylabel ul li a span,.article ul li a span{
+  color: #959595;
 }
-.mylabel ul li a:hover{
+.mylabel ul li a:hover,.article ul li a:hover{
   background-color: #e67e22;
   color: #FFFFFF !important;
 }
-.mylabel ul li a:hover{
+.mylabel ul li a:hover,.article ul li a:hover{
   color: #000;
 }
 .mylabel ul li:last-child a:hover{
   background-color: #cccccc;
+}
+.label-cloud a{
+    display: block;
+    text-decoration: none;
+    float: left;
+    margin: 5px 5px;
+    text-align: center;
+}
+.content.tag-cloud.line-no a{
+    border:none !important;
 }
