@@ -55,7 +55,9 @@ class AdminPostController extends AdminbaseController {
 			$article['smeta']=json_encode($_POST['smeta']);
 			$article['post_content']=htmlspecialchars_decode($article['post_content']);
 			$result=$this->posts_model->add($article);
+
 			if ($result) {
+                $this->addTag(preg_split('/\s|,/',$article['post_keywords']), $result);
 				//
 				foreach ($_POST['term'] as $mterm_id){
 					$this->term_relationships_model->add(array("term_id"=>intval($mterm_id),"object_id"=>$result));
@@ -111,8 +113,10 @@ class AdminPostController extends AdminbaseController {
 			$article=I("post.post");
 			$article['smeta']=json_encode($_POST['smeta']);
 			$article['post_content']=htmlspecialchars_decode($article['post_content']);
+
 			$result=$this->posts_model->save($article);
 			if ($result!==false) {
+                $this->addTag(preg_split('/\s|,/',$article['post_keywords']), $post_id);
 				$this->success("保存成功！");
 			} else {
 				$this->error("保存失败！");
@@ -472,5 +476,41 @@ class AdminPostController extends AdminbaseController {
 			}
 		}
 	}
+
+    function addTag($tag,$post_id){
+        if(is_array($tag)){
+            $tag = array_filter($tag);
+            foreach ($tag as $item){
+                $tag_id = M('Tags')->where(['name'=>$item])->getField('id');
+                if($tag_id)
+                {
+                    M('Tags')->where(['name'=>$item])->setInc('count');
+                }
+                else
+                {
+                    $tag_id = M('Tags')->add(array('name'=>$item,'count'=>1));
+                }
+                if(!M('Tag_relationships')->where(array('object_id'=>$post_id,'tag_id'=>$tag_id))->find()){
+                    M('Tag_relationships')->add(array('object_id'=>$post_id,'tag_id'=>$tag_id));
+                }
+            }
+        }
+        else
+        {
+            if(!$tag) return;
+            $tag_id = M('Tags')->where(['name'=>$tag])->getField('id');
+            if($tag_id)
+            {
+                M('Tags')->where(['name'=>$tag])->setInc('count');
+            }
+            else
+            {
+                $tag_id = M('Tags')->add(array('name'=>$tag,'count'=>1));
+            }
+            if(!M('Tag_relationships')->where(array('object_id'=>$post_id,'tag_id'=>$tag_id))->find()){
+                M('Tag_relationships')->add(array('object_id'=>$post_id,'tag_id'=>$tag_id));
+            }
+        }
+    }
 	
 }

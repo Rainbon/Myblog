@@ -1,0 +1,5 @@
+<ul>
+    <volist name="data" id="vo">
+        <li><a href="{:yeskn_url('archives',$vo['year'].'/'.$vo['month'])}">{$vo.name}<span> ({$vo.count})</span></a></li>
+    </volist>
+</ul>

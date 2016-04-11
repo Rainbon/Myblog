@@ -16,20 +16,12 @@
     </div>
     <!-- end 我的日常  -->
 
+    <!-- start 推荐列表 widget -->
     <!-- start 我的标签  -->
     <div class="widget">
         <h4 class="title">我的标签</h4>
         <div class="content community mylabel">
-            <ul>
-                <li><a href="">web基础 <span>()</span></a></li>
-                <li><a href="">jQuery <span>()</span></a></li>
-                <li><a href="">Javascript <span>()</span></a></li>
-                <li><a href="">日常 <span>()</span></a></li>
-                <li><a href="">经验分享 <span>()</span></a></li>
-                <li><a href="">面试 <span>()</span></a></li>
-                <li><a href="">更多</a></li>
-            </ul>
-
+            {:W('Sidebar/HotTags')}
         </div>
     </div>
     <!-- end 我的标签  -->
@@ -38,10 +30,7 @@
     <div class="widget">
         <h4 class="title">随笔档案</h4>
         <div class="content community mylabel">
-            <ul>
-                <li><a href="">2016年4月 <span>()</span></a></li>
-                <li><a href="">2016年3月 <span>()</span></a></li>
-            </ul>
+            {:W('Sidebar/Archives')}
         </div>
     </div>
     <!-- end 随笔档案  -->
