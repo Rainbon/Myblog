@@ -59,4 +59,6 @@ class SidebarWidget extends Controller
         $this->assign('data',$data);
         $this->display('Home:Widget:hotTags');
     }
+
+
 }
