@@ -13,11 +13,11 @@ $configs = array(
     ),
     'URL_ROUTER_ON'   => true,
     'URL_ROUTE_RULES'=>array(
-        'archives/:year/:month' => 'Home/Archives/index?year=:1month=:2',
-        'tag/:id'      => 'Home/Tag/index?name=:1',
-        'page/:id'     => 'Home/Index/index?page=:1',
-        'article/:id'  => 'Home/Article/index?id=:1',
-        'category/:id' => 'Home/Category/index?id=:1',
+        'archives/:year/:month' => 'Home/Archives/index',
+        'tag/:name'             => 'Home/Tag/index',
+        'page/:page'            => 'Home/Index/index',
+        'article/:id'           => 'Home/Article/index',
+        'category/:id'          => 'Home/Category/index',
 
     )
 );

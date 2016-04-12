@@ -24,6 +24,7 @@ class TagController extends HomebaseController
         foreach ($post_ids as $value){
             $_post_ids[] = $value['object_id'];
         }
+        if(!$_post_ids) $this->error('该页面不存在');
         $count = M('Posts')->where(['post_status'=>1,'id'=>array('in',$_post_ids)])->count();
         $Page = new Page($count,5);
         $pages = $Page->show();
