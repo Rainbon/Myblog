@@ -19,7 +19,7 @@ class PublicController extends AdminbaseController {
     //后台登陆界面
     public function login() {
     	if(isset($_SESSION['ADMIN_ID'])){//已经登录
-    		$this->success(L('LOGIN_SUCCESS'),U("Index/index"));
+    		$this->success(L('LOGIN_SUCCESS')."ddd",U("Index/index"));
     	}else{
     	    $site_admin_url_password =C("SP_SITE_ADMIN_URL_PASSWORD");
     	    $upw=session("__SP_UPW__");
