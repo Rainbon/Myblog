@@ -56,13 +56,17 @@ class CheckcodeController extends Controller {
 	        'codeSet'   =>  !empty($code_set)?$code_set:"2345678abcdefhijkmnpqrstuvwxyzABCDEFGHJKLMNPQRTUVWXY",             // 验证码字符集合
 	        'expire'    =>  1800,            // 验证码过期时间（s）
 	        'useImgBg'  =>  false,           // 使用背景图片 
-	        'fontSize'  =>  !empty($font_size)?$font_size:25,              // 验证码字体大小(px)
-	        'useCurve'  =>  $use_curve===0?false:true,           // 是否画混淆曲线
-	        'useNoise'  =>  $use_noise===0?false:true,            // 是否添加杂点	
+	        'fontSize'  =>  22,              // 验证码字体大小(px)
+//	        'fontSize'  =>  !empty($font_size)?$font_size:25,              // 验证码字体大小(px)
+	        'useCurve'  =>  false,           // 是否画混淆曲线
+//	        'useCurve'  =>  $use_curve===0?false:true,           // 是否画混淆曲线
+	        'useNoise'  =>  false,            // 是否添加杂点
+//	        'useNoise'  =>  $use_noise===0?false:true,            // 是否添加杂点
 	        'imageH'    =>  $height,               // 验证码图片高度
 	        'imageW'    =>  $width,               // 验证码图片宽度
-	        'length'    =>  !empty($length)?$length:4,               // 验证码位数
-	        'bg'        =>  array(243, 251, 254),  // 背景颜色
+	        'length'    =>  5,               // 验证码位数
+//	        'length'    =>  !empty($length)?$length:4,               // 验证码位数
+	        'bg'        =>  array(210, 210, 210),  // 背景颜色
 	        'reset'     =>  true,           // 验证成功后是否重置
     	);
     	$Verify = new \Think\Verify($config);
