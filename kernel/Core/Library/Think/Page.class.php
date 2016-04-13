@@ -73,8 +73,8 @@ class Page{
         if(MODULE_NAME === 'Home' && CONTROLLER_NAME !== 'Index'){
 		   // $str = str_replace('?'.$_SERVER["QUERY_STRING"],'',$_SERVER["REQUEST_URI"])."?page=".$page;
             $str2 = preg_replace('/\?page=\d+/','?page='.$page,$_SERVER["REQUEST_URI"]);
-			var_dump($page);
-			var_dump($str2);
+			//var_dump($page);
+			//var_dump($str2);
             return $str2;
         }
         return str_replace(urlencode('[PAGE]'), $page, $this->url);
