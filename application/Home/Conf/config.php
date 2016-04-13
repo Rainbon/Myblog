@@ -13,6 +13,7 @@ $configs = array(
     ),
     'URL_ROUTER_ON'   => true,
     'URL_ROUTE_RULES'=>array(
+        'author/:name'          => 'Home/Author/index',
         'archives/:year/:month' => 'Home/Archives/index',
         'tag/:name'             => 'Home/Tag/index',
         'page/:page'            => 'Home/Index/index',
