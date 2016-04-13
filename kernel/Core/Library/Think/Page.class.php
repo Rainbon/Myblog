@@ -71,11 +71,12 @@ class Page{
      */
     private function url($page){
         if(MODULE_NAME === 'Home' && CONTROLLER_NAME !== 'Index'){
-			if(strpos($_SERVER["REQUEST_URI"],'page=') !== false){
-				$str2 = preg_replace('/page=\d+/','page='.$page,$_SERVER["REQUEST_URI"]);
-			}
-			else
-				$str2 = $_SERVER["REQUEST_URI"]."?page=".$page;
+            if(strpos($_SERVER["REQUEST_URI"],'page=') !== false){
+                $str2 = preg_replace('/page=\d+/','page='.$page,$_SERVER["REQUEST_URI"]);
+            }
+            else
+                $str2 = $_SERVER["REQUEST_URI"]."?page=".$page;
+
             return $str2;
         }
         return str_replace(urlencode('[PAGE]'), $page, $this->url);
