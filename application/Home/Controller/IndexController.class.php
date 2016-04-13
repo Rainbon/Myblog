@@ -45,6 +45,15 @@ class IndexController extends HomebaseController {
 		$this->display("Home:about");
 	}
 
+	public function avatar()
+	{
+		$rand = rand(1,4);
+        $image = file_get_contents("http://static.yeskn.com/avatar/".$rand.".jpg");  //假设当前文件夹已有图片001.jpg
+        header('Content-type: image/jpg');
+        echo $image;
+        die();
+	}
+
     public function test(){
         $this->display('Home:test');
     }
