@@ -45,15 +45,15 @@
 <!-- start header -->
 
 
-
-<header class="main-header" style="<block name='banner-bg'>background-image: url('/public/blog/images/nav2.jpg')</block>">
+<header class="main-header"
+        style="<block name='banner-bg'>background-image: url('/public/blog/images/nav.jpeg')</block>">
     <div class="container">
         <div class="row">
             <div class="col-sm-12">
 
                 <!-- start logo -->
                 <a class="branding" href="http://ch.yeskn.com" title="夜色空凝 - 彩虹"><img
-                        src="/public/blog/images/logo.png"
+                        src="/public/blog/images/icon.png"
                         alt="夜色空凝 - 彩虹"></a>
                 <!-- end logo -->
                 <h2 class="text-hide">夜色空凝 - 彩虹</h2>
@@ -76,13 +76,10 @@
                 </div>
 
 
-
-
-
                 <div class="collapse navbar-collapse" id="main-menu">
 
 
-                 {$_home_nav}
+                    {$_home_nav}
 
 
                     <ul class="menu">
@@ -101,7 +98,9 @@
     <div class="container">
         <aside class="row">
             <block name="main">主要区域</block>
-            <block name="sidebar"><include file="blog:Home:Block:sidebar" /></block>
+            <block name="sidebar">
+                <include file="blog:Home:Block:sidebar"/>
+            </block>
         </aside>
     </div>
 </section>
@@ -113,9 +112,9 @@
                 <div class="widget">
                     <h4 class="title ">友情链接</h4>
                     <div class="content tag-cloud line-no">
-                        <a href="http://www.yeskn.com" >夜色空凝</a><br/>
-                        <a href="https://www.zhihu.com/people/jaking" >Jake的知乎</a><br/>
-                        <a href="https://www.zhihu.com/people/deng-cai-hong" >我的知乎</a><br/>
+                        <a href="http://www.yeskn.com">夜色空凝</a><br/>
+                        <a href="https://www.zhihu.com/people/jaking">Jake的知乎</a><br/>
+                        <a href="https://www.zhihu.com/people/deng-cai-hong">我的知乎</a><br/>
                     </div>
                     <!--<a href="http://www.yeskn.com" >夜色空凝</a><br/>
                     <a href="https://www.zhihu.com/people/jaking" >Jake的知乎</a><br/>
@@ -136,10 +135,10 @@
                 <div class="widget">
                     <h4 class="title">推荐</h4>
                     <div class="content tag-cloud line-no">
-                    <a href="http://www.imooc.com/course/list" >慕课网</a>
-                    <a href="http://www.jikexueyuan.com/" >极客学院</a>
-                    <a href="http://www.zhangxinxu.com/wordpress/" >张鑫旭</a>
-                    <a href="http://www.cnblogs.com/cate/108703/" >博客园</a><br/>
+                        <a href="http://www.imooc.com/course/list">慕课网</a>
+                        <a href="http://www.jikexueyuan.com/">极客学院</a>
+                        <a href="http://www.zhangxinxu.com/wordpress/">张鑫旭</a>
+                        <a href="http://www.cnblogs.com/cate/108703/">博客园</a><br/>
                     </div>
                 </div>
             </div>
@@ -160,8 +159,6 @@
 <a href="#" id="back-to-top"><i class="fa fa-angle-up"></i></a>
 
 
-
-
 <script src="/public/blog/js/jquery.min.js"></script>
 <script src="/public/blog/js/bootstrap.min.js"></script>
 <script src="/public/blog/js/jquery.fitvids.min.js"></script>
@@ -173,7 +170,8 @@
             var src = $(this).attr('src');
 
             $(this).wrap('<a href="' + src + '" class="mfp-zoom" style="display:block;"></a>');
-        })});
+        })
+    });
 </script>
 
 <block name="foot_js"></block>

@@ -1,0 +1,140 @@
+/* by caihongmei 2016年4月14日14:43:22*/
+body{
+    margin:0;
+    padding:0;
+}
+.header{
+    position: relative;
+    margin:0 auto;
+    width: 700px;
+    height: 138px;
+    background: -webkit-linear-gradient(left,lightblue,bisque);
+    z-index: 1;
+    box-sizing: border-box;
+    /*overflow: visible;*/
+}
+.header .logo{
+    width: 140px;
+    height: 140px;
+    border-radius: 70px;
+    position: absolute;
+    top: 58px;
+    left: 270px;
+    z-index:100;
+    box-sizing: border-box;
+    border: 8px solid #ffffff;
+    background-image: url("logo.jpg") ;
+    background-position: 40% 20%;
+}
+.main{
+    width: 700px;
+    /*height: 2100px;*/
+    margin:0 auto;
+    background-color:#f6f6f6  ;
+    z-index: 1;
+    margin-top: -20px;
+}
+.main .profile{
+    padding-top: 90px;
+    text-align: center;
+    width: 620px;
+}
+.main .history{
+    width: 620px;
+    margin: 50px auto 20px;
+    vertical-align: middle;
+}
+.center{
+    display: inline-block;
+    font-size: 18px;
+    text-align: center;
+    width: 120px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 10px;
+    background-color: antiquewhite;
+    margin: 0 20px;
+}
+.line-l{
+    float: left;
+    width: 230px;
+}
+.line-r{
+    float: right;
+    width: 230px;
+}
+.work-content{
+    margin-top: 40px;
+}
+.work-content span,.school span{
+    display: inline-block;
+    float: right;
+}
+.logo-ll img,.school-l img{
+    display: inline-block;
+    width: 55px;
+    height: 55px;
+    float: left;
+
+}
+.education,.experience,.show-text,.self-details,.expected-work,.skill,.split{
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+h5{
+    margin-top: -10px;
+}
+
+.details a,.showtext1 a{
+    margin-left: 10px;
+    text-decoration: none;
+    color: #000;
+}
+.details a:hover ,.showtext1 a:hover{
+    color: #aaaaaa;
+}
+.showtext1{
+    background-color: antiquewhite;
+    width: 620px;
+    height: 150px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+.self-details .logo-l{
+    float: left;
+    margin-right: 20px;
+    width: 140px;
+    height: 140px;
+    border-radius: 70px;
+    box-sizing: border-box;
+    border: 8px solid #ffffff;
+    background-image: url("logo.jpg") ;
+    background-position: 40% 20%;
+}
+.about-work ul{
+    list-style-type: none;
+    display: block;
+}
+.about-work{
+    padding-bottom: 30px;
+}
+.about-work ul li{
+    display: block;
+    float: left;
+    width: 120px;
+    height: 30px;
+    padding:5px 10px;
+    text-align: center;
+    margin-right: 20px;
+}
+
+
+.footer{
+    width: 700px;
+    height: 80px;
+    line-height: 80px;
+    background:  #ececff ;
+    text-align: center;
+    margin: -20px  auto 0;
+}
