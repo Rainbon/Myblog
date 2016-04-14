@@ -151,15 +151,3 @@ h5{
     font-weight: normal;
     font-style: normal
 }
-.name:before{
-    content: "\F27E";
-}
-.time:before{
-    content:"\F017" ;
-}
-.location:before{
-    content:"\F041" ;
-}
-.money:before{
-    content:"\F157" ;
-}
