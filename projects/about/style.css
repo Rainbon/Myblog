@@ -38,6 +38,7 @@ body{
     padding-top: 90px;
     text-align: center;
     width: 620px;
+    margin:0 auto;
 }
 .main .history{
     width: 620px;
