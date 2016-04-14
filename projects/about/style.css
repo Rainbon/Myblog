@@ -64,8 +64,8 @@ body{
     float: right;
     width: 230px;
 }
-.work-content{
-    margin-top: 40px;
+.work-content p,.details p{
+    padding-top: 10px;
 }
 .work-content span,.school span{
     display: inline-block;
@@ -76,17 +76,23 @@ body{
     width: 55px;
     height: 55px;
     float: left;
+    margin-right: 10px;
 
 }
-.education,.experience,.show-text,.self-details,.expected-work,.skill,.split{
+.education,.experience,.show-text,.self-details,.expected-work,.skill,.split,.Professional{
     padding-top: 40px;
     padding-bottom: 40px;
 }
-
-h5{
-    margin-top: -10px;
+.details span,.showtext1 a{
+    font-size: 18px;
+    font-weight: bold;
 }
-
+.showtext1 {
+    padding: 10px 10px;
+}
+.showtext1 p{
+    text-indent: 10px;
+}
 .details a,.showtext1 a{
     margin-left: 10px;
     text-decoration: none;
