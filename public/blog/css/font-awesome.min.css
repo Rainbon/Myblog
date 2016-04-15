@@ -1422,7 +1422,7 @@
     content: "\f156"
 }
 
-.fa-cny:before, .fa-rmb:before, .fa-yen:before, .fa-jpy:before {
+.fa-cny:before, .fa-rmb:before, .fa-yen:before, .fa:before {
     content: "\f157"
 }
 
