@@ -23,8 +23,8 @@ body{
     z-index:100;
     box-sizing: border-box;
     border: 8px solid #ffffff;
-    background-image: url("logo.jpg") ;
-    background-position: 40% 20%;
+    background-image: url("kk.JPG") ;
+    background-position: 40% 35%;
 }
 .main{
     width: 700px;
@@ -116,8 +116,8 @@ body{
     border-radius: 70px;
     box-sizing: border-box;
     border: 8px solid #ffffff;
-    background-image: url("logo.jpg") ;
-    background-position: 40% 20%;
+    background-image: url("kk.JPG") ;
+    background-position: 40% 35%;
 }
 .about-work ul{
     list-style-type: none;
