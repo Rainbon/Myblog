@@ -2,3 +2,4 @@
 .idea/
 data/runtime/
 data/conf/db.php
+.well-known
